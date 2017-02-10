@@ -11,6 +11,12 @@ These stubs are meant to be used in code editors that do support displaying
 documentation of APIs, but lack a good documentation of the native ECMAScript
 APIs (e.g. WebStorm 2016).
 
+## Which files to use in editor
+
+In you prefer undocumented stubs, these can be found in the `input` directory.
+The `output` directory contains the stubs from the `input` directory enhanced
+using the documentation that has been extracted from the MDN.
+
 ## Detailed licencing information
 
 The code stubs and the type annotations in the docblocks, as well as the
