@@ -10,6 +10,7 @@
     "esprima": "^1.1.1"
   },
   "scripts": {
+    "start": "node bootstrap.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
