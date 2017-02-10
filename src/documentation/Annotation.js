@@ -170,6 +170,8 @@ function buildTypeString(type) {
             return "{" + type.fields.map(function (field) {
                 return field.key + ": " + buildTypeString(field.value)
             }).join(", ") + "}";
+        case "AllLiteral":
+            return "*";
         default:
             throw new Error("Unknown type descriptor type: " + type.type);
     }
