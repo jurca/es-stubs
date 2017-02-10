@@ -132,13 +132,14 @@ MdnRetriever.prototype.extractSection = function (article, sectionId, level) {
  * response.
  * 
  * @param {string} responseBody Body of the MDN server response.
- * @returns {string} Extracted documenation article text.
+ * @returns {string} Extracted documentation article text.
  */
 MdnRetriever.prototype.extractArticle = function (responseBody) {
     var start, end;
     start = responseBody.indexOf("<article id=\"wikiArticle\">");
     if (start === -1) {
-        throw new Error("Cannot find the wiki article wrapper");
+        console.warn("Cannot find the wiki article wrapper: " + responseBody);
+        return "";
     }
     end = responseBody.indexOf("</article>");
     return responseBody.substring(start + 26, end).trim();
@@ -196,7 +197,7 @@ function createAnnotations(definition, syntaxInfo) {
                 break;
             case "return":
             case "returns":
-                annotations.push(new annotation.Annotation("returns",
+                annotations.push(new annotation.Annotation("return",
                         tag.type, syntaxInfo.returns ?
                         syntaxInfo.returns.trim() : tag.description));
                 break;
