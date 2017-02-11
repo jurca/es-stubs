@@ -17,7 +17,7 @@
  * remains unchanged.</p> <p>Note that <code>Object.assign()</code> does not
  * throw on <code>null</code> or <code>undefined</code> source values.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object.
  * @param {...Object} sources The source object(s).
  * @return {Object} <p>The target object.</p>
@@ -34,7 +34,7 @@ Object.assign = function (target, sources) {};
  * <code>Object.getOwnPropertySymbols()</code> returns an empty array unless
  * you have set symbol properties on your object.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} obj The object whose symbol properties are to be returned.
  * @return {Array<symbol>} <p>An array of all symbol properties found directly
  * upon the given object.</p>
@@ -63,7 +63,7 @@ Object.getOwnPropertySymbols = function (obj) {};
  * and <code>+0</code> as equal and treats <code>Number.NaN</code> as not equal
  * to <code>NaN</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {*} value1 The first value to compare.
  * @param {*} value2 The second value to compare.
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
@@ -83,7 +83,7 @@ Object.is = function (value1, value2) {};
  * prototype of an object, vs. the more
  * controversial <code>Object.prototype.__proto__</code> property.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} obj The object which is to have its prototype set.
  * @param {?Object} prototype The object's new prototype (an object or
  * <code>null</code>).
@@ -120,7 +120,7 @@ Object.setPrototypeOf = function (obj, prototype) {};
  * someMethod is anonymous </pre> <p>To change it, you could use
  * <code>Object.defineProperty()</code> though.</p>
  *
- * @summary 
+ * @summary
  * @type {string}
  */
 Function.name = null;
@@ -157,7 +157,7 @@ Function.name = null;
  * so that this array will be empty unless you've set symbol properties on the
  * object.</p>
  *
- * @summary 
+ * @summary
  * @constructor
  * @param {string=} description
  * @return {symbol}
@@ -189,7 +189,7 @@ function symbol() {}
  * <tr> <td>[[symbol]]</td> <td>A symbol that is stored globally.</td> </tr>
  * </tbody> </table>
  *
- * @summary 
+ * @summary
  * @param {string} key String, required. The key for the symbol (and also used
  * for the description of the symbol).
  * @return {symbol} <p>An existing symbol with the given key if found;
@@ -199,9 +199,9 @@ function symbol() {}
 Symbol.for = function (key) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {symbol} sym Symbol, required. The symbol to find a key for.
  * @see Symbol.for()
  */
@@ -217,7 +217,7 @@ Symbol.keyFor = function (sym) {};
  * string concatenation with them:</p> <pre class="brush: js">Symbol('foo') +
  * 'bar'; // TypeError: Can't convert symbol to string</pre>
  *
- * @summary 
+ * @summary
  * @return {string} <p>A string representing the specified <code>Symbol</code>
  * object.</p>
  * @see Object.prototype.toString()
@@ -232,7 +232,7 @@ Symbol.prototype.toString = function () {};
  * JavaScript automatically invokes it when encountering an object where a
  * primitive value is expected.</p>
  *
- * @summary 
+ * @summary
  * @return {*} <p>The primitive value of the specified <code>Symbol</code>
  * object.</p>
  * @see Object.prototype.valueOf()
@@ -244,7 +244,7 @@ Symbol.prototype.valueOf = function () {};
  * <code>2.2204460492503130808472633361816E-16</code>, or
  * <code>2<sup>-52</sup></code>.</p>
  *
- * @summary 
+ * @summary
  * @type {number}
  * @see Number
  */
@@ -266,7 +266,7 @@ Number.EPSILON = null;
  * <code>Number.MAX_SAFE_INTEGER</code>, rather than as a property of a
  * <code>Number</code> object you created.</p>
  *
- * @summary 
+ * @summary
  * @type {number}
  * @see Number.MIN_SAFE_INTEGER
  * @see Number.isSafeInteger()
@@ -278,7 +278,7 @@ Number.MAX_SAFE_INTEGER = null;
  * doesn't forcibly convert the parameter to a number. This means only values
  * of the type number, that are also finite, return <code>true</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {number} testValue
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
  * given value is a finite number.</p>
@@ -291,7 +291,7 @@ Number.isFinite = function (testValue) {};
  * return <code>false</code>. If the value is <code>NaN</code> or infinite,
  * return <code>false</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {number} value The value to be tested for being an integer.
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
  * given value is an integer.</p>
@@ -312,7 +312,7 @@ Number.isInteger = function (value) {};
  * This also means that only values of the type number, that are also
  * <code>NaN</code>, return <code>true</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {*} value The value to be tested for <code>NaN</code>.
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
  * given value is <code>NaN</code>.</p>
@@ -322,9 +322,9 @@ Number.isInteger = function (value) {};
 Number.isNaN = function (value) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} testValue The value to be tested for being a safe integer.
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
  * given value is a number that is a safe integer.</p>
@@ -337,7 +337,7 @@ Number.isSafeInteger = function (testValue) {};
 /**
  * <p>Please see <code>parseFloat()</code> for more details and examples.</p>
  *
- * @summary 
+ * @summary
  * @param {string} string A string that represents the value you want to parse.
  * @see Number
  * @see parseFloat()
@@ -351,7 +351,7 @@ Number.parseFloat = function (string) {};
  * is modularization of globals). Please see <code>parseInt()</code> for more
  * details and examples.</p>
  *
- * @summary 
+ * @summary
  * @param {string} string The value to parse. If the <code>string</code>
  * argument is not a string, then it is converted to a string (using the
  * <code>ToString</code> abstract operation). Leading whitespace in the string
@@ -374,7 +374,7 @@ Number.parseInt = function (string, radix) {};
  * <code>Math</code> object you created (<code>Math</code> is no
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The hyperbolic arc-cosine of the given number. If the
  * number is less than <strong>1</strong>, <code>NaN</code>.</p>
@@ -392,7 +392,7 @@ Math.acosh = function (x) {};
  * <code>Math</code> object you created (<code>Math</code> is not a
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The hyperbolic arcsine of the given number.</p>
  * @see Math.acosh()
@@ -409,7 +409,7 @@ Math.asinh = function (x) {};
  * <code>Math</code> object you created (<code>Math</code> is not a
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The hyperbolic arctangent of the given number.</p>
  * @see Math.acosh()
@@ -426,7 +426,7 @@ Math.atanh = function (x) {};
  * <code>Math</code> object you created (<code>Math</code> is not a
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The cube root of the given number.</p>
  * @see Math.pow()
@@ -442,7 +442,7 @@ Math.cbrt = function (x) {};
  * because all bits are <code>0</code>.</p> <p>This function is particularly
  * useful for systems that compile to JS, like Emscripten.</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The number of leading zero bits in the 32-bit binary
  * representation of the given number.</p>
@@ -457,7 +457,7 @@ Math.clz32 = function (x) {};
  * <code>Math</code> object you created (<code>Math</code> is not a
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The hyperbolic cosine of the given number.</p>
  * @see Math.acosh()
@@ -474,7 +474,7 @@ Math.cosh = function (x) {};
  * <code>Math</code> object you created (<code>Math</code> is not a
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>A number representing <code>e<sup>x</sup> - 1</code>,
  * where <code>e</code> is Euler's number and <code>x</code> is the
@@ -495,7 +495,7 @@ Math.expm1 = function (x) {};
  * a <code>Math</code> object you created (<code>Math</code> is not a
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The nearest single precision float representation of the
  * given number.</p>
@@ -529,7 +529,7 @@ Math.fround = function (x) {};
  * <code>NaN</code>.</p> <p>With one argument, <code>Math.hypot()</code>
  * returns the same as <code>Math.abs()</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {...number} value1_value2 Numbers.
  * @return {number} <p>The square root of the sum of squares of the given
  * arguments. If at least one of the arguments cannot be converted to a number,
@@ -548,7 +548,7 @@ Math.hypot = function (value1_value2) {};
  * <code>Math</code> object you created (<code>Math</code> is not a
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} a First number.
  * @param {number} b Second number.
  * @return {number} <p>The result of the C-like 32-bit multiplication of the
@@ -579,7 +579,7 @@ Math.imul = function (a, b) {};
  * than as a method of a <code>Math</code> object you created
  * (<code>Math</code> is not a constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The natural logarithm (base <code>e</code>) of
  * <strong>1</strong> plus the given number. If the number is less than
@@ -602,7 +602,7 @@ Math.log1p = function (x) {};
  * equvalent of Math.log(x) / Math.log(10). For log10(e) use the
  * constant <code>Math.LOG10E</code> which is 1 / <code>Math.LN10</code>. </p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The base 10 logarithm of the given number. If the number
  * is negative, <code>NaN</code> is returned.</p>
@@ -623,7 +623,7 @@ Math.log10 = function (x) {};
  * equvalent of Math.log(x) / Math.log(2). For log2(e) use the
  * constant <code>Math.LOG2E</code> which is 1 / <code>Math.LN2</code>. </p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The base 2 logarithm of the given number. If the number
  * is negative, <code>NaN</code> is returned.</p>
@@ -646,7 +646,7 @@ Math.log2 = function (x) {};
  * <p>The argument passed to this function will be converted to <code>x</code>
  * type implicitly.</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>A number representing the sign of the given argument. If
  * the argument is a positive number, negative number, positive zero or
@@ -667,7 +667,7 @@ Math.sign = function (x) {};
  * <code>Math</code> object you created (<code>Math</code> is not a
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The hyperbolic sine of the given number.</p>
  * @see Math.acosh()
@@ -684,7 +684,7 @@ Math.sinh = function (x) {};
  * <code>Math</code> object you created (<code>Math</code> is not a
  * constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The hyperbolic tangent of the given number.</p>
  * @see Math.acosh()
@@ -707,7 +707,7 @@ Math.tanh = function (x) {};
  * than as a method of a <code>Math</code> object you created
  * (<code>Math</code> is not a constructor).</p>
  *
- * @summary 
+ * @summary
  * @param {number} x A number.
  * @return {number} <p>The integer part of the given number.</p>
  * @see Math.abs()
@@ -725,7 +725,7 @@ Math.trunc = function (x) {};
  * <code>String.fromCodePoint()</code>, rather than as a method of a
  * <code>String</code> object you created.</p>
  *
- * @summary 
+ * @summary
  * @param {number} num1_numN A sequence of code points.
  * @return {string} <p>A string created by using the specified sequence of code
  * points.</p>
@@ -745,7 +745,7 @@ String.fromCodePoint = function (num1_numN) {};
  * function and performs concatenation. You can even re-implement it with
  * normal JavaScript code.</p>
  *
- * @summary 
+ * @summary
  * @param {{raw: string}} callSite Well-formed template call site object, like
  * <code>{ raw: 'string' }</code>.
  * @param {...*} _substitutions Well-formed template call site object, like
@@ -760,7 +760,7 @@ String.raw = function (callSite, _substitutions) {};
  * is returned. If no UTF-16 surrogate pair begins at <code>pos</code>, the
  * code unit at <code>pos</code> is returned.</p>
  *
- * @summary 
+ * @summary
  * @param {number} pos Position of an element in the String to return the code
  * point value from.
  * @return {number} <p>A number representing the code unit value of the
@@ -780,7 +780,7 @@ String.prototype.codePointAt = function (pos) {};
  * expression returns false:</p> <pre class="brush: js">'Blue
  * Whale'.includes('blue'); // returns false </pre>
  *
- * @summary 
+ * @summary
  * @param {string} searchString A string to be searched for within this string.
  * @param {number=} position Optional. The position in this string at which to
  * begin searching for <code>searchString</code>; defaults to 0.
@@ -800,7 +800,7 @@ String.prototype.includes = function (searchString, position) {};
  * <p>This method lets you determine whether or not a string ends with another
  * string. This method is case-sensitive.</p>
  *
- * @summary 
+ * @summary
  * @param {string} searchString The characters to be searched for at the end of
  * this string.
  * @param {number=} position Optional. Search within this string as if this
@@ -821,7 +821,7 @@ String.prototype.endsWith = function (searchString, position) {};
  * Normalization Form of the string. It does not affect the value of the string
  * itself.</p>
  *
- * @summary 
+ * @summary
  * @param {string} form One of <code>"NFC"</code>, <code>"NFD"</code>,
  * <code>"NFKC"</code>, or <code>"NFKD"</code>, specifying the Unicode
  * Normalization Form. If omitted or <code>undefined</code>, <code>"NFC"</code>
@@ -836,9 +836,9 @@ String.prototype.endsWith = function (searchString, position) {};
 String.prototype.normalize = function (form) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} count An integer between 0 and +∞: [0, +∞), indicating the
  * number of times to repeat the string in the newly-created string that is to
  * be returned.
@@ -851,7 +851,7 @@ String.prototype.repeat = function (count) {};
  * <p>This method lets you determine whether or not a string begins with
  * another string. This method is case-sensitive.</p>
  *
- * @summary 
+ * @summary
  * @param {string} searchString The characters to be searched for at the start
  * of this string.
  * @param {number=} position
@@ -878,7 +878,7 @@ String.prototype.startsWith = function (searchString, position) {};
  * <code>anchor()</code> method become elements in the
  * <code>document.anchors</code> array.</p>
  *
- * @summary 
+ * @summary
  * @param {type} name A string representing the <code>name</code> attribute of
  * the a tag to be created.
  * @return {HTMLAnchorElement} <p>A string containing an ) defines a hyperlink
@@ -895,7 +895,7 @@ String.prototype.anchor = function (name) {};
  * <p>The <code>big()</code> method embeds a string in a
  * <code>&lt;big&gt;</code> tag: <code>"&lt;big&gt;str&lt;/big&gt;"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @return {HTMLElement} <p>A string containing a ) makes the text font size
@@ -912,7 +912,7 @@ String.prototype.big = function () {};
  * <code>&lt;blink&gt;</code> tag:
  * <code>"&lt;blink&gt;str&lt;/blink&gt;"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Blinking text is frowned upon by several accessibility
  * standards. The &lt;blink&gt; element itself is non-standard and deprecated.
  * @return {HTMLElement} <p>A string containing a ) is a non-standard element
@@ -928,7 +928,7 @@ String.prototype.blink = function () {};
  * <p>The <code>bold()</code> method embeds a string in a
  * <code>&lt;b&gt;</code> tag: <code>"&lt;b&gt;str&lt;/b&gt;"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @return {HTMLElement} <p>A string containing a  Element represents a span of
@@ -949,7 +949,7 @@ String.prototype.bold = function () {};
  * <p>The <code>fixed()</code> method embeds a string in a
  * <code>&lt;tt&gt;</code> tag: <code>"&lt;tt&gt;str&lt;/tt&gt;"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @return {HTMLElement} <p>A string representing a ) produces an inline
@@ -969,7 +969,7 @@ String.prototype.fixed = function () {};
  * salmon are red=FA, green=80, and blue=72, so the RGB triplet for salmon is
  * <code>"FA8072"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @param {string} color A string expressing the color as a hexadecimal RGB
@@ -992,7 +992,7 @@ String.prototype.fontcolor = function (color) {};
  * font size using the &lt;font> element."><code>&lt;basefont&gt;</code>
  * tag.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @param {number} size An integer between 1 and 7, a string representing a
@@ -1008,7 +1008,7 @@ String.prototype.fontsize = function (size) {};
  * <p>The <code>italics()</code> method embeds a string in an
  * <code>&lt;i&gt;</code> tag: <code>"&lt;i&gt;str&lt;/i&gt;"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @return {HTMLElement} <p>A string containing a  Element represents a range
@@ -1032,7 +1032,7 @@ String.prototype.italics = function () {};
  * and &lt;a> elements in a document with a value for the href attribute."
  * href="/en-US/docs/Web/API/Document/links"><code>document.links</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {string} url Any string that specifies the <code>href</code>
  * attribute of the <code>&lt;a&gt;</code> tag; it should be a valid URL
  * (relative or absolute), with any <code>&amp;</code> characters escaped as
@@ -1054,7 +1054,7 @@ String.prototype.link = function (url) {};
  * <code>&lt;small&gt;</code> tag:
  * <code>"&lt;small&gt;str&lt;/small&gt;"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @return {HTMLElement} <p>A string containing a ) makes the text font size
@@ -1073,7 +1073,7 @@ String.prototype.small = function () {};
  * <code>&lt;strike&gt;</code> tag:
  * <code>"&lt;strike&gt;str&lt;/strike&gt;"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @return {HTMLElement} <p>A string containing a ) renders text with a
@@ -1089,7 +1089,7 @@ String.prototype.strike = function () {};
  * <p>The <code>sub()</code> method embeds a string in a
  * <code>&lt;sub&gt;</code> tag: <code>"&lt;sub&gt;str&lt;/sub&gt;"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @return {HTMLElement} <p>A string containing a  element defines a span of
@@ -1104,7 +1104,7 @@ String.prototype.sub = function () {};
  * <p>The <code>sup()</code> method embeds a string in a
  * <code>&lt;sup&gt;</code> tag: <code>"&lt;sup&gt;str&lt;/sup&gt;"</code>.</p>
  *
- * @summary 
+ * @summary
  * @deprecated Do not use this method because it relies on deprecated HTML
  * elements.
  * @return {HTMLElement} <p>A string containing a  element defines a span of
@@ -1119,7 +1119,7 @@ String.prototype.sup = function () {};
  * <p>Flags in the <code>flags</code> property are sorted alphabetically (from
  * left to right, e.g. <code>"gimuy"</code>).</p>
  *
- * @summary 
+ * @summary
  * @type {string}
  * @see RegExp.prototype.source
  */
@@ -1133,7 +1133,7 @@ RegExp.prototype.flags = null;
  * string (and does not attempt to match from any later indexes).</p> <p>You
  * cannot change this property directly. It is read-only.</p>
  *
- * @summary 
+ * @summary
  * @type {boolean}
  * @see RegExp.lastIndex
  * @see RegExp.prototype.global
@@ -1151,7 +1151,7 @@ RegExp.prototype.sticky = null;
  * will be interpreted as such, for example.</p> <p>You cannot change this
  * property directly. It is read-only.</p>
  *
- * @summary 
+ * @summary
  * @type {boolean}
  * @see RegExp.lastIndex
  * @see RegExp.prototype.global
@@ -1166,7 +1166,7 @@ RegExp.prototype.unicode = null;
  * <p> The <code>compile</code> method is deprecated. You can just use the
  * <code>RegExp</code> constructor to achieve the same effect.</p>
  *
- * @summary 
+ * @summary
  * @deprecated This feature is being removed from the standard and browsers.
  * Use the <code>RegExp</code> constructor to achieve the same.
  * @param {string} pattern The text of the regular expression.
@@ -1203,11 +1203,11 @@ RegExp.prototype.compile = function (pattern, flags) {};
  * <code>Array.from</code> are "inherited" by subclasses of <code>Array</code>
  * and create new instances of the subclass, not <code>Array</code>.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @template E
- * @param {({length: number}|{next: function(): {value: E, done: boolean}})}
- * arrayLike An array-like or iterable object to convert to an array.
+ * @param {({length: number}|Iterator<E>)} arrayLike
+ * An array-like or iterable object to convert to an array.
  * @param {function(this: T, E): E=} mapFn Optional. Map function to call on
  * every element of the array.
  * @param {T=} thisArg Optional. Value to use as <code>this</code> when
@@ -1224,7 +1224,7 @@ Array.from = function (arrayLike, mapFn, thisArg) {};
  * information see <code>Array.of</code> and <code>Array.from</code> proposal
  * and <code>Array.of</code> polyfill.</p>
  *
- * @summary 
+ * @summary
  * @template E
  * @param {...E} _element Elements of which to create the array.
  * @return {Array<E>} <p>A new <code>Array</code> instance.</p>
@@ -1246,7 +1246,7 @@ Array.of = function (_element) {};
  * the length of <code>this</code>, but will change its content and create new
  * properties if necessary.</p>
  *
- * @summary 
+ * @summary
  * @template E
  * @param {number} target Zero based index at which to copy the sequence to. If
  * negative, <code>target</code> will be counted from the end. If
@@ -1276,7 +1276,7 @@ Array.prototype.copyWithin = function (target, start, end) {};
  * method, it will change <code>this</code> object itself, and return it, not
  * just return a copy of it.</p>
  *
- * @summary 
+ * @summary
  * @template E
  * @param {E} value Value to fill an array.
  * @param {number=} start
@@ -1288,12 +1288,11 @@ Array.prototype.copyWithin = function (target, start, end) {};
 Array.prototype.fill = function (value, start, end) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @template E
- * @return {{next: function(): {value: E, done: boolean}}} <p>A new
- * <code>Array</code> iterator object.</p>
+ * @return {Iterator<E>} <p>A new <code>Array</code> iterator object.</p>
  * @see Array.prototype.keys()
  * @see Array.prototype.values()
  * @see Array.prototype.forEach()
@@ -1328,7 +1327,7 @@ Array.prototype.entries = function () {};
  * visits that element's index; elements that are deleted are still
  * visited.</p>
  *
- * @summary 
+ * @summary
  * @template E
  * @template T
  * @param {function(this: T, E, number, Array<E>): boolean} callback Function
@@ -1372,7 +1371,7 @@ Array.prototype.find = function (callback, thisArg) {};
  * <code>findIndex</code> visits that element's index; elements that are
  * deleted are not visited.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @template E
  * @param {function(this: T, E, number, Array<E>): boolean} callback Function
@@ -1391,46 +1390,45 @@ Array.prototype.find = function (callback, thisArg) {};
 Array.prototype.findIndex = function (callback, thisArg) {};
 
 /**
- * 
  *
- * @summary 
- * @return {{next: function(): {value: number, done: boolean}}} <p>A new
- * <code>Array</code> iterator object.</p>
+ *
+ * @summary
+ * @return {Iterator<number>} <p>A new <code>Array</code> iterator object.</p>
  * @see Array.prototype.values()
  * @see Array.prototype.entries()
  */
 Array.prototype.keys = function () {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @param {number} length
  */
 function ArrayBuffer(length) {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @type {number}
  */
 ArrayBuffer.prototype.byteLength = null;
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {(*|ArrayBuffer|DataView|TypedArray)} arg
  * @return {boolean}
  */
 ArrayBuffer.isView = function (arg) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number=} start
  * @param {number=} end
  * @return {ArrayBuffer}
@@ -1438,9 +1436,9 @@ ArrayBuffer.isView = function (arg) {};
 ArrayBuffer.prototype.slice = function (start, end) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @param {ArrayBuffer} buffer
  * @param {number=} byteOffset
@@ -1449,33 +1447,33 @@ ArrayBuffer.prototype.slice = function (start, end) {};
 function DataView(buffer, byteOffset, byteLength) {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @type {ArrayBuffer}
  */
 DataView.prototype.buffer = null;
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @type {number}
  */
 DataView.prototype.byteLength = null;
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @type {number}
  */
 DataView.prototype.byteOffset = null;
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {boolean=} littleEndian
  * @return {number}
@@ -1483,9 +1481,9 @@ DataView.prototype.byteOffset = null;
 DataView.prototype.getFloat32 = function (byteOffset, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {boolean=} littleEndian
  * @return {number}
@@ -1493,9 +1491,9 @@ DataView.prototype.getFloat32 = function (byteOffset, littleEndian) {};
 DataView.prototype.getFloat64 = function (byteOffset, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {boolean=} littleEndian
  * @return {number}
@@ -1503,9 +1501,9 @@ DataView.prototype.getFloat64 = function (byteOffset, littleEndian) {};
 DataView.prototype.getInt16 = function (byteOffset, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {boolean=} littleEndian
  * @return {number}
@@ -1513,18 +1511,18 @@ DataView.prototype.getInt16 = function (byteOffset, littleEndian) {};
 DataView.prototype.getInt32 = function (byteOffset, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @return {number}
  */
 DataView.prototype.getInt8 = function (byteOffset) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {boolean=} littleEndian
  * @return {number}
@@ -1532,9 +1530,9 @@ DataView.prototype.getInt8 = function (byteOffset) {};
 DataView.prototype.getUint16 = function (byteOffset, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {boolean=} littleEndian
  * @return {number}
@@ -1542,18 +1540,18 @@ DataView.prototype.getUint16 = function (byteOffset, littleEndian) {};
 DataView.prototype.getUint32 = function (byteOffset, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @return {number}
  */
 DataView.prototype.getUint8 = function (byteOffset) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {number} value
  * @param {boolean=} littleEndian
@@ -1561,9 +1559,9 @@ DataView.prototype.getUint8 = function (byteOffset) {};
 DataView.prototype.setFloat32 = function (byteOffset, value, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {number} value
  * @param {boolean=} littleEndian
@@ -1571,9 +1569,9 @@ DataView.prototype.setFloat32 = function (byteOffset, value, littleEndian) {};
 DataView.prototype.setFloat64 = function (byteOffset, value, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {number} value
  * @param {boolean=} littleEndian
@@ -1581,9 +1579,9 @@ DataView.prototype.setFloat64 = function (byteOffset, value, littleEndian) {};
 DataView.prototype.setInt16 = function (byteOffset, value, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {number} value
  * @param {boolean=} littleEndian
@@ -1591,18 +1589,18 @@ DataView.prototype.setInt16 = function (byteOffset, value, littleEndian) {};
 DataView.prototype.setInt32 = function (byteOffset, value, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {number} value
  */
 DataView.prototype.setInt8 = function (byteOffset, value) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {number} value
  * @param {boolean=} littleEndian
@@ -1610,9 +1608,9 @@ DataView.prototype.setInt8 = function (byteOffset, value) {};
 DataView.prototype.setUint16 = function (byteOffset, value, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {number} value
  * @param {boolean=} littleEndian
@@ -1620,9 +1618,9 @@ DataView.prototype.setUint16 = function (byteOffset, value, littleEndian) {};
 DataView.prototype.setUint32 = function (byteOffset, value, littleEndian) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {number} byteOffset
  * @param {number} value
  */
@@ -1666,10 +1664,10 @@ DataView.prototype.setUint8 = function (byteOffset, value) {};
  * Int8Array(8))[-1]; // undefined // Named properties are allowed, though (Fx
  * 30) Int8Array.prototype.foo = 'bar'; (new Int8Array(32)).foo; // "bar"</pre>
  *
- * @summary 
+ * @summary
  * @interface
- * @param {(number|TypedArray|{length: number}|{next: function(): {value: *,
- * done: boolean}}|ArrayBuffer)} length_typedArray_object_buffer When called
+ * @implements Iterable<number>
+ * @param {(number|TypedArray|{length: number}|Iterable<number>|ArrayBuffer)} length_typedArray_object_buffer When called
  * with a <code>length</code> argument, an internal array buffer is created in
  * memory of size <em>length multiplied by BYTES_PER_ELEMENT</em> bytes
  * containing 0 value. When called with a <code>typedArray</code> argument,
@@ -1736,7 +1734,7 @@ function TypedArray(length_typedArray_object_buffer, _byteOffset, _length) {}
  * <code>BYTES_PER_ELEMENT</code> constant contains the number of bytes each
  * element in the given TypedArray has.</p>
  *
- * @summary 
+ * @summary
  * @type {number}
  * @see TypedArray
  */
@@ -1752,7 +1750,7 @@ TypedArray.BYTES_PER_ELEMENT = null;
  * type is <code>Array</code>, with <code>ClampedArray</code> as a special
  * case. Please see <code>Uint8ClampedArray</code> for more details.</p>
  *
- * @summary 
+ * @summary
  * @type {string}
  * @see TypedArray
  */
@@ -1790,10 +1788,10 @@ TypedArray.name = null;
  * <code><em>TypedArray</em>.from</code> will ensure the result is dense.</li>
  * </ul>
  *
- * @summary 
+ * @summary
  * @template T
- * @param {({length: number}|{next: function(): {value: *, done: boolean}})}
- * source An array-like or iterable object to convert to a typed array.
+ * @param {({length: number}|Iterable<E>)} source An array-like or iterable
+ * object to convert to a typed array.
  * @param {function(this: T, *): number=} mapFn Optional. Map function to call
  * on every element of the typed array.
  * @param {T=} thisArg Optional. Value to use as <code>this</code> when
@@ -1817,7 +1815,7 @@ TypedArray.from = function (source, mapFn, thisArg) {};
  * objects, it calls <code>handler.set</code> to create new elements rather
  * than <code>handler.defineProperty</code>.</li> </ul>
  *
- * @summary 
+ * @summary
  * @param {...number} _element Elements of which to create the typed array.
  * @return {TypedArray} <p>A new <code>TypedArray</code> instance.</p>
  * @see TypedArray.from()
@@ -1830,7 +1828,7 @@ TypedArray.of = function (_element) {};
  * method replaces the experimental
  * <code>TypedArray.prototype.move()</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {number} target Target start index position where to copy the
  * elements to.
  * @param {number} start Source start index position where to start copying
@@ -1841,10 +1839,10 @@ TypedArray.of = function (_element) {};
 TypedArray.prototype.copyWithin = function (target, start, end) {};
 
 /**
- * 
  *
- * @summary 
- * @return {{next: function(): {value: number, done: boolean}}} <p>A new
+ *
+ * @summary
+ * @return {Iterator<number>} <p>A new
  * <code><strong>Array Iterator</strong></code> object.</p>
  * @see TypedArray
  * @see TypedArray.prototype.keys()
@@ -1872,7 +1870,7 @@ TypedArray.prototype.entries = function () {};
  * function.</p> <p><code>every</code> does not mutate the typed array on which
  * it is called.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @param {function(this: T, number, number, TypedArray): boolean} callback
  * Function to test for each element, taking three arguments: <dl>
@@ -1902,7 +1900,7 @@ TypedArray.prototype.every = function (callback, thisArg) {};
  * length of the array. If <code>end</code> is negative, it is treated as
  * <code>length+end</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {number} value Value to fill the typed array with.
  * @param {number=} start Optional. Start index. Defaults to 0.
  * @param {number=} end Optional. End index (not included). Defaults to
@@ -1938,7 +1936,7 @@ TypedArray.prototype.fill = function (value, start, end) {};
  * <code>callback</code> will be the value at the time <code>filter()</code>
  * visits them; elements that are deleted are not visited.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @param {function(this: T, number, number, TypedArray): number} callback
  * Function to test each element of the typed array. Invoked with arguments
@@ -1976,7 +1974,7 @@ TypedArray.prototype.filter = function (callback, thisArg) {};
  * <code>callback</code> will be the value at the time that <code>find</code>
  * visits that element's index; elements that are deleted are not visited.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @param {function(this: T, number, number, TypedArray): number} callback
  * Function to execute on each value in the typed array, taking three
@@ -2017,7 +2015,7 @@ TypedArray.prototype.find = function (callback, thisArg) {};
  * <code>findIndex</code> visits that element's index; elements that are
  * deleted are not visited.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @param {function(this: T, number, number, TypedArray): number} callback
  * Function to execute on each value in the typed array, taking three
@@ -2061,7 +2059,7 @@ TypedArray.prototype.findIndex = function (callback, thisArg) {};
  * function once for each typed array element; unlike <code>every()</code> and
  * <code>some()</code> it, always returns the value <code>undefined</code>.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @param {function(this: T, number, number, TypedArray)} callback Function
  * that produces an element of the new typed array, taking three arguments:
@@ -2084,7 +2082,7 @@ TypedArray.prototype.forEach = function (callback, thisArg) {};
  * the typed array using strict equality (the same method used by the ===, or
  * triple-equals, operator).</p>
  *
- * @summary 
+ * @summary
  * @template E
  * @param {E} searchElement Element to locate in the typed array.
  * @param {number=} fromIndex The index to start the search at. If the index is
@@ -2102,9 +2100,9 @@ TypedArray.prototype.forEach = function (callback, thisArg) {};
 TypedArray.prototype.indexOf = function (searchElement, fromIndex) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {string} separator Optional. Specifies a string to separate each
  * element. The separator is converted to a string if necessary. If omitted,
  * the typed array elements are separated with a comma (",").
@@ -2115,10 +2113,10 @@ TypedArray.prototype.indexOf = function (searchElement, fromIndex) {};
 TypedArray.prototype.join = function (separator) {};
 
 /**
- * 
  *
- * @summary 
- * @return {{next: function(): {value: number, done: boolean}}} <p>A new
+ *
+ * @summary
+ * @return {Iterator<number>} <p>A new
  * <code><strong>Array Iterator</strong></code> object.</p>
  * @see TypedArray
  * @see TypedArray.prototype.entries()
@@ -2132,7 +2130,7 @@ TypedArray.prototype.keys = function () {};
  * of the typed array using strict equality (the same method used by the ===,
  * or triple-equals, operator).</p>
  *
- * @summary 
+ * @summary
  * @template E
  * @param {E} searchElement Element to locate in the typed array.
  * @param {number=} fromIndex Optional. The index at which to start searching
@@ -2175,7 +2173,7 @@ TypedArray.prototype.lastIndexOf = function (searchElement, fromIndex) {};
  * at the time <code>map</code> visits them; elements that are deleted are not
  * visited.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @param {function(this: T, number, number, TypedArray): number} callback
  * Function that produces an element of the new typed array, taking three
@@ -2213,7 +2211,7 @@ TypedArray.prototype.map = function (callback, thisArg) {};
  * array is empty, the solo value would be returned without calling
  * <code>callback</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {function(number, number, number, TypedArray): number} callback
  * Function to execute on each value in the typed array, taking four arguments:
  * <dl> <dt><code>previousValue</code></dt> <dd>The value previously returned
@@ -2255,7 +2253,7 @@ TypedArray.prototype.reduce = function (callback, initialValue) {};
  * provided but the typed array is empty, the solo value would be returned
  * without calling <code>callback</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {function(number, number, number, TypedArray)} callback Function to
  * execute on each value in the typed array, taking four arguments: <dl>
  * <dt><code>previousValue</code></dt> <dd>The value previously returned in the
@@ -2274,18 +2272,18 @@ TypedArray.prototype.reduce = function (callback, initialValue) {};
 TypedArray.prototype.reduceRight = function (callback, initialValue) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @return {TypedArray} <p>The reversed array.</p>
  * @see Array.prototype.reverse()
  */
 TypedArray.prototype.reverse = function () {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {(Array<number>|TypedArray)} array The array from which to copy
  * values. All values from the source array are copied into the target array,
  * unless the length of the source array plus the offset exceeds the length of
@@ -2301,7 +2299,7 @@ TypedArray.prototype.set = function (array, offset) {};
  * of elements from the original typed array.</p> <p>If a new element is added
  * to either typed array, the other typed array is not affected.</p>
  *
- * @summary 
+ * @summary
  * @param {number=} begin
  * @param {number=} end
  * @return {TypedArray}
@@ -2326,7 +2324,7 @@ TypedArray.prototype.slice = function (begin, end) {};
  * function.</p> <p><code>some</code> does not mutate the typed array on which
  * it is called.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @param {function(this: T, number, number, TypedArray)} callback Function to
  * test for each element, taking three arguments: <dl>
@@ -2346,9 +2344,9 @@ TypedArray.prototype.slice = function (begin, end) {};
 TypedArray.prototype.some = function (callback, thisArg) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {function(number, number): number} compareFunction
  * @return {TypedArray} <p>The sorted typed array.</p>
  * @see Array.prototype.sort()
@@ -2364,7 +2362,7 @@ TypedArray.prototype.sort = function (compareFunction) {};
  * that this is creating a new view on the existing buffer; changes to the new
  * object's contents will impact the original object and vice versa.</p>
  *
- * @summary 
+ * @summary
  * @param {number=} begin
  * @param {number=} end
  * @return {TypedArray} <p>A new <code>TypedArray</code> object.</p>
@@ -2374,9 +2372,9 @@ TypedArray.prototype.sort = function (compareFunction) {};
 TypedArray.prototype.subarray = function (begin, end) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {(string|Array<string>)=} locales <p>Optional. A string with a BCP 47
  * language tag, or an array of such strings. For the general form and
  * interpretation of the <code>locales</code> argument, see the Intl page. The
@@ -2463,7 +2461,7 @@ TypedArray.prototype.toLocaleString = function (locales, options) {};
  * class="brush: js">var numbers = new Uint8Array([2, 5, 8, 1, 4])
  * numbers.toString(); // "[object Uint8Array]" </pre>
  *
- * @summary 
+ * @summary
  * @return {string} <p>A string representing the elements of the typed
  * array.</p>
  * @see TypedArray.prototype.join()
@@ -2471,10 +2469,10 @@ TypedArray.prototype.toLocaleString = function (locales, options) {};
 TypedArray.prototype.toString = function () {};
 
 /**
- * 
  *
- * @summary 
- * @return {{next: function(): {value: number, done: boolean}}} <p>A new
+ *
+ * @summary
+ * @return {Iterator<number>} <p>A new
  * <code><strong>Array Iterator</strong></code> object.</p>
  * @see TypedArray
  * @see TypedArray.prototype.entries()
@@ -2484,81 +2482,81 @@ TypedArray.prototype.toString = function () {};
 TypedArray.prototype.values = function () {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @implements TypedArray
  */
 function Int8Array() {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @implements TypedArray
  */
 function Uint8Array() {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @implements TypedArray
  */
 function Uint8ClampedArray() {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @implements TypedArray
  */
 function Int16Array() {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @implements TypedArray
  */
 function Uint16Array() {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @implements TypedArray
  */
 function Int32Array() {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @implements TypedArray
  */
 function Uint32Array() {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @implements TypedArray
  */
 function Float32Array() {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @implements TypedArray
  */
@@ -2609,14 +2607,14 @@ function Float64Array() {}
  * contrast you have a fixed amount of keys, operate on them individually, and
  * distinguish between their usage, then you want an object.</p>
  *
- * @summary 
+ * @summary
  * @constructor
  * @template K
  * @template V
- * @param {(Array<Array<(K|V)>>|{next: function(): {value: Array<(K|V)>, done:
- * boolean}})=} iterable Iterable is an Array or other iterable object whose
- * elements are key-value pairs (2-element Arrays). Each key-value pair is
- * added to the new Map. <code>null</code> is treated as
+ * @implements Iterable<Array<(K|V)>>
+ * @param {Iterable<Array<(K|V)>>=} iterable Iterable is an Array or other
+ * iterable object whose elements are key-value pairs (2-element Arrays). Each
+ * key-value pair is added to the new Map. <code>null</code> is treated as
  * <code>undefined</code>.
  * @see Set
  * @see WeakMap
@@ -2630,24 +2628,24 @@ function Map(iterable) {}
  * <code>size</code> is <code>undefined</code>; you can not change this
  * property.</p>
  *
- * @summary 
+ * @summary
  * @type {number}
  * @see Map
  */
 Map.prototype.size = null;
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @see Map
  */
 Map.prototype.clear = function () {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {K} key Required. The key of the element to remove from the
  * <code>Map</code> object.
  * @return {boolean} <p>Returns <code>true</code> if an element in the
@@ -2658,11 +2656,11 @@ Map.prototype.clear = function () {};
 Map.prototype.delete = function (key) {};
 
 /**
- * 
  *
- * @summary 
- * @return {{next: function(): {value: Array<(K|V)>, done: boolean}}} <p>A new
- * <code>Map</code> iterator object.</p>
+ *
+ * @summary
+ * @return {Iterator<Array<(K|V)>>} <p>A new <code>Map</code> iterator
+ * object.</p>
  * @see Map.prototype.keys()
  * @see Map.prototype.values()
  */
@@ -2690,7 +2688,7 @@ Map.prototype.entries = function () {};
  * <p><code>forEach</code> executes the <code>callback</code> function once for
  * each element in the <code>Map</code> object; it does not return a value.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @template V
  * @template K
@@ -2704,9 +2702,9 @@ Map.prototype.entries = function () {};
 Map.prototype.forEach = function (callback, thisArg) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {K} key Required. The key of the element to return from the
  * <code>Map</code> object.
  * @return {(undefined|V)} <p>Returns the element associated with the specified
@@ -2719,9 +2717,9 @@ Map.prototype.forEach = function (callback, thisArg) {};
 Map.prototype.get = function (key) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {K} key Required. The key of the element to test for presence in the
  * <code>Map</code> object.
  * @return {boolean} <dl> <dt>Boolean</dt> <dd>Returns <code>true</code> if an
@@ -2734,20 +2732,19 @@ Map.prototype.get = function (key) {};
 Map.prototype.has = function (key) {};
 
 /**
- * 
  *
- * @summary 
- * @return {{next: function(): {value: K, done: boolean}}} <p>A new
- * <code>Map</code> iterator object.</p>
+ *
+ * @summary
+ * @return @return {Iterator<K>} <p>A new <code>Map</code> iterator object.</p>
  * @see Map.prototype.entries()
  * @see Map.prototype.values()
  */
 Map.prototype.keys = function () {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {K} key Required. The key of the element to add to the
  * <code>Map</code> object.
  * @param {V} value Required. The value of the element to add to the
@@ -2760,11 +2757,10 @@ Map.prototype.keys = function () {};
 Map.prototype.set = function (key, value) {};
 
 /**
- * 
  *
- * @summary 
- * @return {{next: function(): {value: V, done: boolean}}} <p>A new
- * <code>Map</code> iterator object.</p>
+ *
+ * @summary
+ * @return {Iterator<V>} <p>A new <code>Map</code> iterator object.</p>
  * @see Map.prototype.entries()
  * @see Map.prototype.keys()
  */
@@ -2781,18 +2777,18 @@ Map.prototype.values = function () {};
  * <code>Set</code>s, <code>+0</code> (which is strictly equal to
  * <code>-0</code>) and <code>-0</code> were different values. However, this
  * was changed in the ECMAScript 2015 specification. See "Value equality for -0
- * and 0" in the browser compatability table for details.</p> <p>Also,
+ * and 0" in the browser compatibility table for details.</p> <p>Also,
  * <code>NaN</code> and <code>undefined</code> can also be stored in a Set.
  * <code>NaN</code> is considered the same as <code>NaN</code> (even though
  * <code>NaN !== NaN</code>).</p>
  *
- * @summary 
+ * @summary
  * @constructor
  * @template E
- * @param {(Array<E>|{next: function(): {value: E, done: boolean}})=} iterable
- * If an iterable object is passed, all of its elements will be added to the
- * new Set. If null is passed instead of iterable, it is treated as not passing
- * iterable at all.
+ * @implements Iterable<E>
+ * @param {Iterable<E>=} iterable If an iterable object is passed, all of its
+ * elements will be added to the new Set. If null is passed instead of
+ * iterable, it is treated as not passing iterable at all.
  * @see Map
  * @see WeakMap
  * @see WeakSet
@@ -2805,16 +2801,16 @@ function Set(iterable) {}
  * <code>size</code> is <code>undefined</code>; you cannot change this
  * property.</p>
  *
- * @summary 
+ * @summary
  * @type {number}
  * @see Set
  */
 Set.prototype.size = null;
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {E} value Required. The value of the element to add to the
  * <code>Set</code> object.
  * @return {Set<E>} <p>The <code>Set</code> object.</p>
@@ -2825,18 +2821,18 @@ Set.prototype.size = null;
 Set.prototype.add = function (value) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @see Set
  * @see Set.prototype.delete()
  */
 Set.prototype.clear = function () {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {E} value Required. The value of the element to remove from the
  * <code>Set</code> object.
  * @return {boolean} <p><code>true</code> if an element in the <code>Set</code>
@@ -2847,13 +2843,12 @@ Set.prototype.clear = function () {};
 Set.prototype.delete = function (value) {};
 
 /**
- * 
  *
- * @summary 
- * @return {{next: function(): {value: Array<E>, done: boolean}}} <p>A new
- * <code>Iterator</code> object that contains an array of <code>[value,
- * value]</code> for each element in the given <code>Set</code>, in insertion
- * order.</p>
+ *
+ * @summary
+ * @return {Iterator<Array<E>>} <p>A new <code>Iterator</code> object that
+ * contains an array of <code>[value, value]</code> for each element in the
+ * given <code>Set</code>, in insertion order.</p>
  * @see Set.prototype.keys()
  * @see Set.prototype.values()
  */
@@ -2885,7 +2880,7 @@ Set.prototype.entries = function () {};
  * <p><code>forEach</code> executes the <code>callback</code> function once for
  * each element in the <code>Set</code> object; it does not return a value.</p>
  *
- * @summary 
+ * @summary
  * @template T
  * @param {function(this: T, E, E, Set<E>)} callback Function to execute for
  * each element.
@@ -2897,9 +2892,9 @@ Set.prototype.entries = function () {};
 Set.prototype.forEach = function (callback, thisArg) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {E} value Required. The value to test for presence in the
  * <code>Set</code> object.
  * @return {boolean} <dl> <dt>Boolean</dt> <dd>Returns <code>true</code> if an
@@ -2912,12 +2907,12 @@ Set.prototype.forEach = function (callback, thisArg) {};
 Set.prototype.has = function (value) {};
 
 /**
- * 
  *
- * @summary 
- * @return {{next: function(): {value: E, done: boolean}}} <p>A new
- * <code><strong>Iterator</strong></code> object containing the values for each
- * element in the given <code>Set</code>, in insertion order.</p>
+ *
+ * @summary
+ * @return {Iterator<E>} <p>A new <code><strong>Iterator</strong></code> object
+ * containing the values for each element in the given <code>Set</code>, in
+ * insertion order.</p>
  * @see Set.prototype.entries()
  */
 Set.prototype.values = function () {};
@@ -2941,14 +2936,14 @@ Set.prototype.values = function () {};
  * introducing non-determinism. If you want to have a list of keys, you should
  * use a <code>Map</code>.</p>
  *
- * @summary 
+ * @summary
  * @constructor
  * @template K
  * @template V
- * @param {(Array<Array<(K|V)>>|{next: function(): {value: Array<(K|V)>, done:
- * boolean}})=} iterable Iterable is an Array or other iterable object whose
- * elements are key-value pairs (2-element Arrays). Each key-value pair will be
- * added to the new WeakMap. null is treated as undefined.
+ * @param {Iterable<Array<(K|V)>>=} iterable Iterable is an Array or other
+ * iterable object whose elements are key-value pairs (2-element Arrays). Each
+ * key-value pair will be added to the new WeakMap. null is treated as
+ * undefined.
  * @see Map
  * @see Set
  * @see WeakSet
@@ -2956,9 +2951,9 @@ Set.prototype.values = function () {};
 function WeakMap(iterable) {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {K} key Required. The key of the element to remove from the
  * <code>WeakMap</code> object.
  * @return {boolean} <p><code>true</code> if an element in the
@@ -2970,9 +2965,9 @@ function WeakMap(iterable) {}
 WeakMap.prototype.delete = function (key) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {K} key Required. The key of the element to return from the
  * <code>WeakMap</code> object.
  * @return {(undefined|V)} <p>The element associated with the specified key in
@@ -2985,9 +2980,9 @@ WeakMap.prototype.delete = function (key) {};
 WeakMap.prototype.get = function (key) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {K} key Required. The key of the element to test for presence in the
  * <code>WeakMap</code> object.
  * @return {boolean} <dl> <dt>Boolean</dt> <dd>Returns <code>true</code> if an
@@ -3000,9 +2995,9 @@ WeakMap.prototype.get = function (key) {};
 WeakMap.prototype.has = function (key) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {K} key Required. The key of the element to add to the
  * <code>WeakMap</code> object.
  * @param {V} value Required. The value of the element to add to the
@@ -3027,12 +3022,12 @@ WeakMap.prototype.set = function (key, value) {};
  * current objects stored in the collection. <code>WeakSets</code> are not
  * enumerable.</li> </ul>
  *
- * @summary 
+ * @summary
  * @constructor
  * @template E
- * @param {(Array<E>|{next: function(): {value: E, done: boolean}})=} iterable
- * If an iterable object is passed, all of its elements will be added to the
- * new <code>WeakSet</code>. null is treated as undefined.
+ * @param {Iterable<E>=} iterable If an iterable object is passed, all of its
+ * elements will be added to the new <code>WeakSet</code>. <code>null</code> is
+ * treated as undefined.
  * @see Map
  * @see Set
  * @see WeakMap
@@ -3040,9 +3035,9 @@ WeakMap.prototype.set = function (key, value) {};
 function WeakSet(iterable) {}
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {E} value Required. The object to add to the <code>WeakSet</code>
  * collection.
  * @return {WeakSet<E>} <p>The <code>WeakSet</code> object.</p>
@@ -3053,9 +3048,9 @@ function WeakSet(iterable) {}
 WeakSet.prototype.add = function (value) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {E} value Required. The object remove from the <code>WeakSet</code>
  * object.
  * @return {boolean} <p><code>true</code> if an element in the
@@ -3068,9 +3063,9 @@ WeakSet.prototype.add = function (value) {};
 WeakSet.prototype.delete = function (value) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {E} value Required. The object to test for presence in the
  * <code>WeakSet</code>.
  * @return {boolean} <dl> <dt>Boolean</dt> <dd>Returns <code>true</code> if an
@@ -3118,7 +3113,7 @@ WeakSet.prototype.has = function (value) {};
  * settled, or it is locked into a promise chain. Domenic Denicola's States and
  * fates contains more details about promise terminology.</p> </div>
  *
- * @summary 
+ * @summary
  * @constructor
  * @template R
  * @param {function(function(R), function(Error))} executor A function that is
@@ -3145,11 +3140,9 @@ function Promise(executor) {}
  * whether or not they have resolved. If an empty array is passed, then this
  * method resolves immediately.</p>
  *
- * @summary 
+ * @summary
  * @template R
- * @param {(Array<(R|Promise<R>|{then: function(function(R),
- * function(Error))})>|{next: function(): {value: (R|Promise<R>|{then:
- * function(function(R), function(Error))}), done: boolean}})} iterable
+ * @param {Iterable<(R|Promise<R>|{then: function(function(R), function(Error))})>} iterable
  * @return {Promise<Array<R>>} <p>A <code>Promise</code> that resolves when all
  * of the promises in the given iterable have resolved, or rejects if any of
  * the promises rejects.</p>
@@ -3162,7 +3155,7 @@ Promise.all = function (iterable) {};
  * <p>The <code>catch</code> method can be useful for error handling in your
  * promise composition.</p>
  *
- * @summary 
+ * @summary
  * @template O
  * @param {function(Error): (O|Promise<O>|{then: function(function(O),
  * function(Error))})} onRejected A <code>Function</code> called when the
@@ -3179,7 +3172,7 @@ Promise.prototype.catch = function (onRejected) {};
  * methods return promises, they can be chained — an operation called
  * <em>composition</em>.</p>
  *
- * @summary 
+ * @summary
  * @template R
  * @template O
  * @param {function(R): (O|Promise<O>|{then: function(function(O),
@@ -3199,11 +3192,9 @@ Promise.prototype.then = function (onFulfilled, onRejected) {};
  * settled the same way as the first passed promise to settle. It resolves or
  * rejects, whichever happens first.</p>
  *
- * @summary 
- * @param {(Array<(R|Promise<R>|{then: function(function(R),
- * function(Error))})>|{next: function(): {value: (R|Promise<R>|{then:
- * function(function(R), function(Error))}), done: boolean}})} iterable An
- * iterable object, such as an <code>Array</code>. See iterable.
+ * @summary
+ * @param {Iterable<(R|Promise<R>|{then: function(function(R), function(Error))})>} iterable
+ * An iterable object, such as an <code>Array</code>. See iterable.
  * @see Promise
  * @see Promise.all()
  */
@@ -3215,7 +3206,7 @@ Promise.race = function (iterable) {};
  * error catching, it is useful to make <code>reason</code> an
  * <code>instanceof</code> <code>Error</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {Error} reason Reason why this <code>Promise</code> rejected.
  * @return {Promise<undefined>} <p>A <code>Promise</code> that is rejected with
  * the given reason.</p>
@@ -3227,7 +3218,7 @@ Promise.reject = function (reason) {};
  * <p>The static <code>Promise.resolve</code> function returns a
  * <code>Promise</code> that is resolved.</p>
  *
- * @summary 
+ * @summary
  * @template R
  * @param {(R|Promise<R>|{then: function(function(R), function(Error))})} value
  * Argument to be resolved by this <code>Promise</code>. Can also be a
@@ -3245,7 +3236,7 @@ Promise.resolve = function (value) {};
  * <code>Reflect</code> are static (just like the <code>Math</code>
  * object).</p>
  *
- * @summary 
+ * @summary
  * @type {Object}
  * @see Proxy
  * @see handler
@@ -3260,7 +3251,7 @@ var Reflect;
  * [1.75]);</pre> <p>With <code>Reflect.apply</code> this becomes less verbose
  * and easier to understand.</p>
  *
- * @summary 
+ * @summary
  * @template R
  * @template T
  * @template A
@@ -3284,7 +3275,7 @@ Reflect.apply = function (target, thisArgument, argumentsList) {};
  * js">var obj = new Foo(...args); var obj = Reflect.construct(Foo,
  * args);</pre>
  *
- * @summary 
+ * @summary
  * @template T
  * @template A
  * @param {function(this: T, ...A)} target The target function to call.
@@ -3309,7 +3300,7 @@ Reflect.construct = function (target, argumentsList, newTarget) {};
  * <code>Boolean</code> indicating whether or not the property was successfully
  * defined.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object on which to define the property.
  * @param {(string|symbol)} propertyKey The name of the property to be defined
  * or modified.
@@ -3327,7 +3318,7 @@ Reflect.defineProperty = function (target, propertyKey, attributes) {};
  * or not the property was successfully deleted. It is almost identical to the
  * non-strict <code>delete</code> operator.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object on which to delete the property.
  * @param {(string|symbol)} propertyKey The name of the property to be deleted.
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
@@ -3341,7 +3332,7 @@ Reflect.deleteProperty = function (target, propertyKey) {};
  * <p>The <code>Reflect.get</code> method allows you to get a property on an
  * object. It is like the property accessor syntax as a function.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object on which to get the property.
  * @param {(string|symbol)} propertyKey The name of the property to get.
  * @param {Object=} receiver The value of <code>this</code> provided for the
@@ -3358,11 +3349,11 @@ Reflect.get = function (target, propertyKey, receiver) {};
  * <code>Object.getOwnPropertyDescriptor()</code> is how non-object targets are
  * handled.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object in which to look for the property.
  * @param {(string|symbol)} propertyKey The name of the property to get an own
  * property descriptor for.
- * @return <p>A property descriptor object if the property exists in the given
+ * @return {(undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})} <p>A property descriptor object if the property exists in the given
  * target object; otherwise, <code>undefined</code>.</p>
  * @see Reflect
  * @see Object.getOwnPropertyDescriptor()
@@ -3374,7 +3365,7 @@ Reflect.getOwnPropertyDescriptor = function (target, propertyKey) {};
  * (i.e. the value of the internal <code>[[Prototype]]</code> property) of the
  * specified object.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object of which to get the prototype.
  * @return {?Object} <p>The prototype of the given object. If there are no
  * inherited properties, <code>null</code> is returned.</p>
@@ -3387,7 +3378,7 @@ Reflect.getPrototypeOf = function (target) {};
  * <p>The <code>Reflect.has</code> method allows you to check if a property is
  * in an object. It works like the <code>in</code> operator as a function.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object in which to look for the property.
  * @param {(string|symbol)} propertyKey The name of the property to check.
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
@@ -3402,7 +3393,7 @@ Reflect.has = function (target, propertyKey) {};
  * object is extensible (whether it can have new properties added to it). It is
  * the same method as <code>Object.isExtensible()</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object which to check if it is extensible.
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
  * target is extensible.</p>
@@ -3415,9 +3406,9 @@ Reflect.isExtensible = function (target) {};
  * <p>The <code>Reflect.ownKeys</code> method returns an array of the
  * <code>target</code> object's own property keys. Its return value is
  * equivalent to<code><code>Object.getOwnPropertyNames</code>(target).concat(<code>Object.getOwnPropertySymbols</code>(target))</code>.</p>
- * 
  *
- * @summary 
+ *
+ * @summary
  * @param {Object} target The target object from which to get the own keys.
  * @return {Array<(string|symbol)>} <p>An <code>Array</code> of the
  * <code>target</code> object's own property keys.</p>
@@ -3432,7 +3423,7 @@ Reflect.ownKeys = function (target) {};
  * extensions to the object). It is the same method as
  * <code>Object.preventExtensions()</code>.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object on which to prevent extensions.
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
  * target was successfully set to prevent extensions.</p>
@@ -3446,7 +3437,7 @@ Reflect.preventExtensions = function (target) {};
  * object. It does property assignment and is like the property accessor syntax
  * as a function.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object on which to set the property.
  * @param {(string|symbol)} propertyKey The name of the property to set.
  * @param {*} value The value to set.
@@ -3463,7 +3454,7 @@ Reflect.set = function (target, propertyKey, value, receiver) {};
  * (i.e. the value of the internal <code>[[Prototype]]</code> property) of the
  * specified object.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target The target object of which to set the prototype.
  * @param {?Object} prototype The object's new prototype (an object or
  * <code>null</code>).
@@ -3475,15 +3466,16 @@ Reflect.set = function (target, propertyKey, value, receiver) {};
 Reflect.setPrototypeOf = function (target, prototype) {};
 
 /**
- * 
  *
- * @summary 
+ *
+ * @summary
  * @constructor
  * @param {Object} target A target object (can be any sort of object, including
  * a native array, a function or even another proxy) to wrap with
  * <code>Proxy</code>.
- * @param handler An object whose properties are functions which define the
- * behavior of the proxy when an operation is performed on it.
+ * @param {{apply: function(Object, Object, Array<*>): *=, construct: function(Object, Array<*>, Function): Object=, defineProperty: function(Object, (string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})): boolean=, deleteProperty: function(Object, (string|symbol)): boolean=, get: function(Object, (string|symbol), Object): *=, getOwnPropertyDescriptor: function(Object, (string|symbol)): (undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})=, getPrototypeOf: function(Object): ?Object=, has: function(Object, (string|symbol)): boolean=, isExtensible: function(Object): boolean=, ownKeys: function(Object): Array<(string|symbol)>=, preventExtensions: function(Object): boolean=, set: function(Object, (string|symbol), *, Object): boolean=, setPrototypeOf: function(Object, ?Object): boolean=}} handler
+ * An object whose properties are functions which define the behavior of the
+ * proxy when an operation is performed on it.
  * @see Object.watch()
  */
 function Proxy(target, handler) {}
@@ -3500,12 +3492,13 @@ function Proxy(target, handler) {}
  * can be garbage collected. Calling <code>revoke()</code> again has no
  * effect.</p>
  *
- * @summary 
+ * @summary
  * @param {Object} target A target object (can be any sort of object, including
  * a native array, a function or even another proxy) to wrap with
  * <code>Proxy</code>.
- * @param handler An object whose properties are functions which define the
- * behavior of the proxy when an operation is performed on it.
+ * @param {{apply: function(Object, Object, Array<*>): *=, construct: function(Object, Array<*>, Function): Object=, defineProperty: function(Object, (string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})): boolean=, deleteProperty: function(Object, (string|symbol)): boolean=, get: function(Object, (string|symbol), Object): *=, getOwnPropertyDescriptor: function(Object, (string|symbol)): (undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})=, getPrototypeOf: function(Object): ?Object=, has: function(Object, (string|symbol)): boolean=, isExtensible: function(Object): boolean=, ownKeys: function(Object): Array<(string|symbol)>=, preventExtensions: function(Object): boolean=, set: function(Object, (string|symbol), *, Object): boolean=, setPrototypeOf: function(Object, ?Object): boolean=}} handler
+ * An object whose properties are functions which define the behavior of the
+ * proxy when an operation is performed on it.
  * @return {{proxy: Proxy, revoke: function()}} <p>A newly created revocable
  * <code>Proxy</code> object is returned.</p>
  * @see Proxy

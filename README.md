@@ -17,18 +17,6 @@ In you prefer undocumented stubs, these can be found in the `input` directory.
 The `output` directory contains the stubs from the `input` directory enhanced
 using the documentation that has been extracted from the MDN.
 
-## Notes about imperfections
-
-I am aware, that a lot could be improved by defining the `Iterable`, `Iterator`
-and other interfaces, however, WebStorm was having issues when I applied such
-an approach. Because of this, some of these interface types have been inlined,
-or replaced by similar structures for better compatibility with the editor.
-
-So, no, don't worry, I realize that Iterable !== Iterator. :)
-
-This may be fixed in the future once the support in WebStorm improves or I'll
-find a suitable work-around for this.
-
 ## Detailed licencing information
 
 The code stubs and the type annotations in the docblocks, as well as the

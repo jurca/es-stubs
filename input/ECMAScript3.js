@@ -825,6 +825,7 @@ Date.prototype.valueOf = function () {};
 /**
  * @constructor
  * @extends Object
+ * @implements Iterable<string>
  * @param {*=} thing
  */
 function String(thing) {}
@@ -1038,8 +1039,9 @@ RegExp.prototype.toString = function () {};
 
 /**
  * @constructor
- * @extends Object
  * @template E
+ * @extends Object
+ * @implements Iterable<E>
  * @param {...E} element0_elementN_arrayLength
  */
 function Array(element0_elementN_arrayLength) {}

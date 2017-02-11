@@ -3064,6 +3064,7 @@ Date.prototype.valueOf = function () {};
  * @summary 
  * @constructor
  * @extends Object
+ * @implements Iterable<string>
  * @param {*=} thing Anything to be converted to a string.
  * @see DOMString
  * @see StringView
@@ -3982,8 +3983,9 @@ RegExp.prototype.toString = function () {};
  *
  * @summary 
  * @constructor
- * @extends Object
  * @template E
+ * @extends Object
+ * @implements Iterable<E>
  * @param {...E} element0_elementN_arrayLength A JavaScript array is
  * initialized with the given elements, except in the case where a single
  * argument is passed to the <code>Array</code> constructor and that argument

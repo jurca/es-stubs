@@ -453,7 +453,7 @@ RegExp.prototype.compile = function(pattern, flags) {};
 /**
  * @template T
  * @template E
- * @param {({length: number}|{next: function(): {value: E, done: boolean}})} arrayLike
+ * @param {({length: number}|Iterator<E>)} arrayLike
  * @param {function(this: T, E): E=} mapFn
  * @param {T=} thisArg
  * @return {Array<E>}
@@ -487,8 +487,7 @@ Array.prototype.fill = function (value, start, end) {};
 
 /**
  * @template E
- * @return {{next: function(): {value: E, done: boolean}}} Iterator of the
- *         elements of this array.
+ * @return {Iterator<E>} Iterator of the elements of this array.
  */
 Array.prototype.entries = function () {};
 
@@ -511,7 +510,7 @@ Array.prototype.find = function (callback, thisArg) {};
 Array.prototype.findIndex = function (callback, thisArg) {};
 
 /**
- * @return {{next: function(): {value: number, done: boolean}}}
+ * @return {Iterator<number>}
  */
 Array.prototype.keys = function () {};
 
@@ -680,7 +679,8 @@ DataView.prototype.setUint8 = function (byteOffset, value) {};
 
 /**
  * @interface
- * @param {(number|TypedArray|{length: number}|{next: function(): {value: *, done: boolean}}|ArrayBuffer)} length_typedArray_object_buffer
+ * @implements Iterable<number>
+ * @param {(number|TypedArray|{length: number}|Iterable<number>|ArrayBuffer)} length_typedArray_object_buffer
  * @param {number=} _byteOffset
  * @param {number=} _length
  * @constructor
@@ -704,7 +704,7 @@ TypedArray.prototype = {};
 
 /**
  * @template T
- * @param {({length: number}|{next: function(): {value: *, done: boolean}})} source
+ * @param {({length: number}|Iterable<E>)} source
  * @param {function(this: T, *): number=} mapFn
  * @param {T=} thisArg
  * @return {TypedArray}
@@ -725,7 +725,7 @@ TypedArray.of = function (_element) {};
 TypedArray.prototype.copyWithin = function (target, start, end) {};
 
 /**
- * @return {{next: function(): {value: number, done: boolean}}}
+ * @return {Iterator<number>}
  */
 TypedArray.prototype.entries = function () {};
 
@@ -790,7 +790,7 @@ TypedArray.prototype.indexOf = function (searchElement, fromIndex) {};
 TypedArray.prototype.join = function (separator) {};
 
 /**
- * @return {{next: function(): {value: number, done: boolean}}}
+ * @return {Iterator<number>}
  */
 TypedArray.prototype.keys = function () {};
 
@@ -876,7 +876,7 @@ TypedArray.prototype.toLocaleString = function (locales, options) {};
 TypedArray.prototype.toString = function () {};
 
 /**
- * @return {{next: function(): {value: number, done: boolean}}}
+ * @return {Iterator<number>}
  */
 TypedArray.prototype.values = function () {};
 
@@ -928,7 +928,8 @@ function Float64Array() {}
 /**
  * @template K
  * @template V
- * @param {(Array<Array<(K|V)>>|{next: function(): {value: Array<(K|V)>, done: boolean}})=} iterable
+ * @implements Iterable<Array<(K|V)>>
+ * @param {Iterable<Array<(K|V)>>=} iterable
  */
 function Map(iterable) {}
 
@@ -953,7 +954,7 @@ Map.prototype.clear = function () {};
 Map.prototype.delete = function (key) {};
 
 /**
- * @return {{next: function(): {value: Array<(K|V)>, done: boolean}}}
+ * @return {Iterator<Array<(K|V)>>}
  */
 Map.prototype.entries = function () {};
 
@@ -979,7 +980,7 @@ Map.prototype.get = function (key) {};
 Map.prototype.has = function (key) {};
 
 /**
- * @return {{next: function(): {value: K, done: boolean}}}
+ * @return {Iterator<K>}
  */
 Map.prototype.keys = function () {};
 
@@ -991,13 +992,14 @@ Map.prototype.keys = function () {};
 Map.prototype.set = function (key, value) {};
 
 /**
- * @return {{next: function(): {value: V, done: boolean}}}
+ * @return {Iterator<V>}
  */
 Map.prototype.values = function () {};
 
 /**
  * @template E
- * @param {(Array<E>|{next: function(): {value: E, done: boolean}})=} iterable
+ * @implements Iterable<E>
+ * @param {Iterable<E>=} iterable
  */
 function Set(iterable) {}
 
@@ -1028,7 +1030,7 @@ Set.prototype.clear = function () {};
 Set.prototype.delete = function (value) {};
 
 /**
- * @return {{next: function(): {value: Array<E>, done: boolean}}}
+ * @return {Iterator<Array<E>>}
  */
 Set.prototype.entries = function () {};
 
@@ -1046,14 +1048,14 @@ Set.prototype.forEach = function (callback, thisArg) {};
 Set.prototype.has = function (value) {};
 
 /**
- * @return {{next: function(): {value: E, done: boolean}}}
+ * @return {Iterator<E>}
  */
 Set.prototype.values = function () {};
 
 /**
  * @template K
  * @template V
- * @param {(Array<Array<(K|V)>>|{next: function(): {value: Array<(K|V)>, done: boolean}})=} iterable
+ * @param {Iterable<Array<(K|V)>>=} iterable
  */
 function WeakMap(iterable) {}
 
@@ -1089,7 +1091,7 @@ WeakMap.prototype.set = function (key, value) {};
 
 /**
  * @template E
- * @param {(Array<E>|{next: function(): {value: E, done: boolean}})=} iterable
+ * @param {Iterable<E>=} iterable
  */
 function WeakSet(iterable) {}
 
@@ -1129,7 +1131,7 @@ Promise.prototype = {};
 
 /**
  * @template R
- * @param {(Array<(R|Promise<R>|{then: function(function(R), function(Error))})>|{next: function(): {value: (R|Promise<R>|{then: function(function(R), function(Error))}), done: boolean}})} iterable
+ * @param {Iterable<(R|Promise<R>|{then: function(function(R), function(Error))})>} iterable
  * @return {Promise<Array<R>>}
  */
 Promise.all = function (iterable) {};
@@ -1151,7 +1153,7 @@ Promise.prototype.catch = function (onRejected) {};
 Promise.prototype.then = function (onFulfilled, onRejected) {};
 
 /**
- * @param {(Array<(R|Promise<R>|{then: function(function(R), function(Error))})>|{next: function(): {value: (R|Promise<R>|{then: function(function(R), function(Error))}), done: boolean}})} iterable
+ * @param {Iterable<(R|Promise<R>|{then: function(function(R), function(Error))})>} iterable
  */
 Promise.race = function (iterable) {};
 
@@ -1273,13 +1275,13 @@ Reflect.setPrototypeOf = function (target, prototype) {};
 
 /**
  * @param {Object} target
- * @param {{apply: function(Object, Object, Array<*>): *=, construct: function(Object, Array<*>, Function): Object=, defineProperty: function(Object, (string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})): boolean=, deleteProperty: function(Object, (string|symbol)): boolean=, get: function(Object, (string|symbol), Object): *=, getOwnPropertyDescriptor: function(Object, (string|symbol)): (undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})=, getPrototypeOf: function(Object): ?Object=, has: function(Object, (string|symbol)): boolean=, isExtensible: function(Object): boolean=, ownKeys: function(Object): (Array<(string|symbol)>|{next: function(): {value: (string|symbol), done: boolean}})=, preventExtensions: function(Object): boolean=, set: function(Object, (string|symbol), *, Object): boolean=, setPrototypeOf: function(Object, ?Object): boolean=}} handler
+ * @param {{apply: function(Object, Object, Array<*>): *=, construct: function(Object, Array<*>, Function): Object=, defineProperty: function(Object, (string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})): boolean=, deleteProperty: function(Object, (string|symbol)): boolean=, get: function(Object, (string|symbol), Object): *=, getOwnPropertyDescriptor: function(Object, (string|symbol)): (undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})=, getPrototypeOf: function(Object): ?Object=, has: function(Object, (string|symbol)): boolean=, isExtensible: function(Object): boolean=, ownKeys: function(Object): Array<(string|symbol)>=, preventExtensions: function(Object): boolean=, set: function(Object, (string|symbol), *, Object): boolean=, setPrototypeOf: function(Object, ?Object): boolean=}} handler
  */
 function Proxy(target, handler) {}
 
 /**
  * @param {Object} target
- * @param {{apply: function(Object, Object, Array<*>): *=, construct: function(Object, Array<*>, Function): Object=, defineProperty: function(Object, (string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})): boolean=, deleteProperty: function(Object, (string|symbol)): boolean=, get: function(Object, (string|symbol), Object): *=, getOwnPropertyDescriptor: function(Object, (string|symbol)): (undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})=, getPrototypeOf: function(Object): ?Object=, has: function(Object, (string|symbol)): boolean=, isExtensible: function(Object): boolean=, ownKeys: function(Object): (Array<(string|symbol)>|{next: function(): {value: (string|symbol), done: boolean}})=, preventExtensions: function(Object): boolean=, set: function(Object, (string|symbol), *, Object): boolean=, setPrototypeOf: function(Object, ?Object): boolean=}} handler
+ * @param {{apply: function(Object, Object, Array<*>): *=, construct: function(Object, Array<*>, Function): Object=, defineProperty: function(Object, (string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})): boolean=, deleteProperty: function(Object, (string|symbol)): boolean=, get: function(Object, (string|symbol), Object): *=, getOwnPropertyDescriptor: function(Object, (string|symbol)): (undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})=, getPrototypeOf: function(Object): ?Object=, has: function(Object, (string|symbol)): boolean=, isExtensible: function(Object): boolean=, ownKeys: function(Object): Array<(string|symbol)>=, preventExtensions: function(Object): boolean=, set: function(Object, (string|symbol), *, Object): boolean=, setPrototypeOf: function(Object, ?Object): boolean=}} handler
  * @return {{proxy: Proxy, revoke: function()}}
  */
 Proxy.revocable = function (target, handler) {};
