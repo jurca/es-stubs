@@ -7,7 +7,7 @@ Object.create = function (proto, propertiesObject) {};
 
 /**
  * @param {Object} obj
- * @param {Object<string, {configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=, get: function(): *=, set: function(*): undefined=}>} props
+ * @param {Object<(string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})>} props
  * @return {Object} The <code>obj</code> object extended with the specified
  *         properties.
  */
@@ -15,8 +15,8 @@ Object.defineProperties = function (obj, props) {};
 
 /**
  * @param {Object} obj
- * @param {string} prop
- * @param {{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=, get: function(): *=, set: function(*): undefined=}} descriptor
+ * @param {(string|symbol)} prop
+ * @param {{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=}} descriptor
  * @return {Object} The <code>obj</code> object extended with the specified
  *         property.
  */
@@ -30,7 +30,7 @@ Object.freeze = function (obj) {};
 
 /**
  * @param {Object} obj
- * @param {string} prop
+ * @param {(string|symbol)} prop
  * @return {({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})}
  *         Descriptor of the <code>obj</code> object's
  *         <code>prop</code> property.

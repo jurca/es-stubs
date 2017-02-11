@@ -26,7 +26,7 @@ Object.create = function (proto, propertiesObject) {};
  *
  * @summary 
  * @param {Object} obj The object on which to define or modify properties.
- * @param props An object whose own enumerable properties constitute
+ * @param {Object<(string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})>} props An object whose own enumerable properties constitute
  * descriptors for the properties to be defined or modified. Property
  * descriptors present in objects come in two main flavors: data descriptors
  * and accessor descriptors (see <code>Object.defineProperty()</code> for more
@@ -115,8 +115,8 @@ Object.defineProperties = function (obj, props) {};
  *
  * @summary 
  * @param {Object} obj The object on which to define the property.
- * @param {string} prop The name of the property to be defined or modified.
- * @param descriptor The descriptor for the property being defined or modified.
+ * @param {(string|symbol)} prop The name of the property to be defined or modified.
+ * @param {({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})} descriptor The descriptor for the property being defined or modified.
  * @return {Object} <p>The object that was passed to the function.</p>
  * @see Object.defineProperties()
  * @see Object.propertyIsEnumerable()
@@ -175,9 +175,10 @@ Object.freeze = function (obj) {};
  *
  * @summary 
  * @param {Object} obj The object in which to look for the property.
- * @param {string} prop The name of the property whose description is to be
+ * @param {(string|symbol)} prop The name of the property whose description is to be
  * retrieved.
- * @return <p>A property descriptor of the given property if it exists on the
+ * @return {({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})}
+ * <p> A property descriptor of the given property if it exists on the
  * object, <code>undefined</code> otherwise.</p>
  * @see Object.defineProperty()
  * @see Reflect.getOwnPropertyDescriptor()
