@@ -199,119 +199,152 @@ Math.asinh = function (x) {};
  */
 Math.atanh = function (x) {};
 
-// TODO: everything below this line needs to be updated
-
 /**
  * @param {number} x
- * @return {number} Cube root of <code>x</code>.
+ * @return {number}
  */
 Math.cbrt = function (x) {};
 
 /**
  * @param {number} x
- * @return {number} Number of leading zero bits in 32-bit unsigned integer
- *          representation of <code>x</code>.
+ * @return {number}
  */
 Math.clz32 = function (x) {};
 
 /**
  * @param {number} x
- * @return {number} Hyperbolic cosine of <code>x</code>.
+ * @return {number}
  */
 Math.cosh = function (x) {};
 
 /**
  * @param {number} x
- * @return {number} <code>Math.exp(x) - 1</code>.
+ * @return {number}
  */
 Math.expm1 = function (x) {};
 
 /**
  * @param {number} x
- * @return {number} Nearest single precision float representation of
- *          <code>x</code>.
+ * @return {number}
  */
 Math.fround = function (x) {};
 
 /**
- * @param {...number} value1_
- * @return {number} Square root of sum of squares of the numbers passed as
- *          arguments.
+ * @param {...number} value1_value2
+ * @return {number}
  */
-Math.hypot = function (value1_) {};
+Math.hypot = function (value1_value2) {};
 
 /**
  * @param {number} a
  * @param {number} b
- * @return {number} result of the C-like 32-bit multiplication of
- *          <code>a</code> and <code>b</code>.
+ * @return {number}
  */
 Math.imul = function (a, b) {};
 
 /**
  * @param {number} x
- * @return {number} Base 10 logarithm of <code>x</code>.
- */
-Math.log10 = function (x) {};
-
-/**
- * @param {number} x
- * @return {number} Natural logarithm of <code>1 + x</code>.
+ * @return {number}
  */
 Math.log1p = function (x) {};
 
 /**
  * @param {number} x
- * @return {number} Base 2 logarithm of <code>x</code>.
+ * @return {number}
+ */
+Math.log10 = function (x) {};
+
+/**
+ * @param {number} x
+ * @return {number}
  */
 Math.log2 = function (x) {};
 
 /**
  * @param {number} x
- * @return {number} Sign of <code>x</code> represented as <code>-1</code>,
- *          <code>0</code>, <code>-0</code>, <code>1</code> or
- *          <code>NaN</code>.
+ * @return {number}
  */
 Math.sign = function (x) {};
 
 /**
  * @param {number} x
- * @return {number} Hyperbolic sine of <code>x</code>.
+ * @return {number}
  */
 Math.sinh = function (x) {};
 
 /**
  * @param {number} x
- * @return {number} Hyperbolic tangent of <code>x</code>.
+ * @return {number}
  */
 Math.tanh = function (x) {};
 
 /**
  * @param {number} x
- * @return {number} Integral part of <code>x</code> stripped of fractional
- *          digits.
+ * @return {number}
  */
 Math.trunc = function (x) {};
 
 /**
  * @param {number} num1_numN
- * @return {string} a string created by using the specified sequence of code
- *          points.
+ * @return {string}
  */
 String.fromCodePoint = function (num1_numN) {};
 
 /**
+ * @param {{raw: string}} callSite
+ * @param {...*} _substitutions
+ */
+String.raw = function (callSite, _substitutions) {};
+
+/**
+ * @param {number} pos
+ * @return {number}
+ */
+String.prototype.codePointAt = function (pos) {};
+
+/**
+ * @param {string} searchString
+ * @param {number=} position
+ * @return {boolean}
+ */
+String.prototype.includes = function (searchString, position) {};
+
+/**
+ * @param {string} searchString
+ * @param {number=} position
+ * @return {boolean}
+ */
+String.prototype.endsWith = function (searchString, position) {};
+
+/**
+ * @param {string} form
+ * @return {string}
+ */
+String.prototype.normalize = function (form) {};
+
+/**
+ * @param {number} count
+ * @return {string}
+ */
+String.prototype.repeat = function (count) {};
+
+/**
+ * @param {string} searchString
+ * @param {number=} position
+ * @return {boolean}
+ */
+String.prototype.startsWith = function (searchString, position) {};
+
+/**
  * @param {type} name
- * @return {HTMLAnchorElement} HTML anchor element that is used as a hypertext
- *          target.
+ * @return {HTMLAnchorElement}
  */
 String.prototype.anchor = function (name) {};
 
 /**
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
- * @return {HTMLElement} HTML element that causes a string to be displayed in
- *          a big font.
+ * @return {HTMLElement}
  */
 String.prototype.big = function () {};
 
@@ -319,47 +352,21 @@ String.prototype.big = function () {};
  * @deprecated Blinking text is frowned upon by several accessibility
  *             standards. The &lt;blink&gt; element itself is non-standard and
  *             deprecated.
- * @return {HTMLElement} HTML element that causes a string to be displayed in
- *          a blinking fashion.
+ * @return {HTMLElement}
  */
 String.prototype.blink = function () {};
 
 /**
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
- * @return {HTMLElement} HTML element that causes a string to be displayed as
- *          bold.
+ * @return {HTMLElement}
  */
 String.prototype.bold = function () {};
 
 /**
- * @param {number} pos
- * @return {number} Non-negative integer that is the UTF-16 encoded code point
- *          value.
- */
-String.prototype.codePointAt = function (pos) {};
-
-/**
- * @param {string} searchString
- * @param {number=} position
- * @return {boolean} <code>true</code> if this string contains the
- *          <code>searchString</code> from the <code>position</code> index.
- */
-String.prototype.contains = function (searchString, position) {};
-
-/**
- * @param {string} searchString
- * @param {number=} position
- * @return {boolean} <code>true</code> if this string ends with
- *          <code>searchString</code>.
- */
-String.prototype.endsWith = function (searchString, position) {};
-
-/**
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
- * @return {HTMLElement} HTML element that causes a string to be displayed in
- *          fixed-pitch font.
+ * @return {HTMLElement}
  */
 String.prototype.fixed = function () {};
 
@@ -367,8 +374,7 @@ String.prototype.fixed = function () {};
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
  * @param {string} color
- * @return {HTMLElement} HTML element that causes a string to be displayed in
- *          the specified font color.
+ * @return {HTMLElement}
  */
 String.prototype.fontcolor = function (color) {};
 
@@ -376,166 +382,904 @@ String.prototype.fontcolor = function (color) {};
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
  * @param {number} size
- * @return {HTMLElement} HTML element that causes a string to be displayed in
- *          the specified font size.
+ * @return {HTMLElement}
  */
 String.prototype.fontsize = function (size) {};
 
 /**
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
- * @return {HTMLElement} HTML element that causes a string to be italic.
+ * @return {HTMLElement}
  */
 String.prototype.italics = function () {};
 
 /**
  * @param {string} url
- * @return {HTMLAnchorElement} HTML element that causes a string to be
- *          displayed as a hypertext link to another URL.
+ * @return {HTMLAnchorElement}
  */
 String.prototype.link = function (url) {};
 
 /**
- * @param {string} form
- * @return {string} Unicode Normalization Form of this string.
- */
-String.prototype.normalize = function (form) {};
-
-/**
- * @param {number} count
- * @return {string} This string repeated <code>count</code> times.
- */
-String.prototype.repeat = function (count) {};
-
-/**
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
- * @return {HTMLElement} HTML element that causes a string to be displayed in
- *          a small font.
+ * @return {HTMLElement}
  */
 String.prototype.small = function () {};
 
 /**
- * @param {string} searchString
- * @param {number=} position
- * @return {boolean} <code>true</code> if this string starts with
- *          <code>searchString</code>.
- */
-String.prototype.startsWith = function (searchString, position) {};
-
-/**
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
- * @return {HTMLElement} HTML element that causes a string to be displayed as
- *          struck-out text.
+ * @return {HTMLElement}
  */
 String.prototype.strike = function () {};
 
 /**
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
- * @return {HTMLElement} HTML element that causes a string to be displayed as
- *          subscript.
+ * @return {HTMLElement}
  */
 String.prototype.sub = function () {};
 
 /**
  * @deprecated Do not use this method because it relies on deprecated HTML
  *             elements.
- * @return {HTMLElement} HTML element that causes a string to be displayed as
- *          superscript.
+ * @return {HTMLElement}
  */
 String.prototype.sup = function () {};
 
 /**
+ * @type {string}
+ */
+RegExp.prototype.flags = "";
+
+/**
  * @type {boolean}
  */
-RegExp.prototype.sticky;
+RegExp.prototype.sticky = false;
 
 /**
- * @param {...(undefined|null|boolean|number|string|Object)} element0_elementN
- * @return {Array} An array of the provided arguments.
+ * @type {boolean}
  */
-Array.of = function (element0_elementN) {};
+RegExp.prototype.unicode = false;
 
 /**
- * @return {Iterator<number, (undefined|null|boolean|number|string|Object)>}
- *          Iterator of the entries of this array.
+ * @deprecated This feature is being removed from the standard and browsers.
+ *             Use the <code>RegExp</code> constructor to achieve the same.
+ * @param {string} pattern
+ * @param {string} flags
  */
-Array.prototype.entries = function () {};
+RegExp.prototype.compile = function(pattern, flags) {};
 
 /**
- * @param {(undefined|null|boolean|number|string|Object)} value
+ * @template T
+ * @template E
+ * @param {({length: number}|{next: function(): {value: E, done: boolean}})} arrayLike
+ * @param {function(this: T, E): E=} mapFn
+ * @param {T=} thisArg
+ * @return {Array<E>}
+ */
+Array.from = function (arrayLike, mapFn, thisArg) {};
+
+/**
+ * @template E
+ * @param {...E} _element
+ * @return {Array<E>}
+ */
+Array.of = function (_element) {};
+
+/**
+ * @template E
+ * @param {number} target
  * @param {number=} start
  * @param {number=} end
+ * @return {Array<E>}
+ */
+Array.prototype.copyWithin = function (target, start, end) {};
+
+/**
+ * @template E
+ * @param {E} value
+ * @param {number=} start
+ * @param {number=} end
+ * @return {Array<E>}
  */
 Array.prototype.fill = function (value, start, end) {};
 
 /**
- * @param {function((undefined|null|boolean|number|string|Object), number, Array): boolean}
- *        callback
- * @param {Object=} thisArg
- * @return {(undefined|null|boolean|number|string|Object)} The first element
- *          that passed the testing callback; <code>undefined</code> otherwise.
+ * @template E
+ * @return {{next: function(): {value: E, done: boolean}}} Iterator of the
+ *         elements of this array.
+ */
+Array.prototype.entries = function () {};
+
+/**
+ * @template E
+ * @template T
+ * @param {function(this:T, E, number, Array<E>): boolean} callback
+ * @param {T=} thisArg
+ * @return {E}
  */
 Array.prototype.find = function (callback, thisArg) {};
 
 /**
- * @param {function((undefined|null|boolean|number|string|Object), number, Array): boolean}
- *        callback
- * @param {Object=} thisArg
- * @return {number} The index of the first element that passed the testing
- *          callback or <code>-1</code> if no such element is found.
+ * @template T
+ * @template E
+ * @param {function(this:T, E, number, Array<E>): boolean} callback
+ * @param {T=} thisArg
+ * @return {number}
  */
 Array.prototype.findIndex = function (callback, thisArg) {};
 
 /**
- * @return {Iterator<number>} Iterator of the array's keys.
+ * @return {{next: function(): {value: number, done: boolean}}}
  */
 Array.prototype.keys = function () {};
 
 /**
- * The {@linkcode Iterator} interface defines the API for iterators - objects
- * implementing the ECMAScript 6 iterator protocol.
- * 
- * @interface
- * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol
+ * @param {number} length
  */
-function Iterator() {}
+function ArrayBuffer(length) {}
 
 /**
- * Returns the next element from the elements this iterator iterates through.
- * 
- * @return {IteratorElement} The next element.
- */
-Iterator.prototype.next = function () {};
-
-/**
- * The {@linkcode IteratorElement} interface defines the API of objects
- * returned by the {@linkcode Iterator#next()} method.
- * 
- * @interface
- * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol
- */
-function IteratorElement() {};
-
-/**
- * Definitions of shared properties of all iterator elements.
- * 
  * @type {Object}
  */
-IteratorElement.prototype;
+ArrayBuffer.prototype = {};
 
 /**
- * The value of this iterated element.
- * 
- * @type {(undefined|null|boolean|number|string|Object)}
+ * @type {number}
  */
-IteratorElement.prototype.value;
+ArrayBuffer.prototype.byteLength = 0;
 
 /**
- * <code>true</code> if this is the last element returned by the iterator.
- * 
- * @type {boolean}
+ * @param {(*|ArrayBuffer|DataView|TypedArray)} arg
+ * @return {boolean}
  */
-IteratorElement.prototype.done;
+ArrayBuffer.isView = function (arg) {};
+
+/**
+ * @param {number=} start
+ * @param {number=} end
+ * @return {ArrayBuffer}
+ */
+ArrayBuffer.prototype.slice = function (start, end) {};
+
+/**
+ * @param {ArrayBuffer} buffer
+ * @param {number=} byteOffset
+ * @param {number=} byteLength
+ */
+function DataView(buffer, byteOffset, byteLength) {}
+
+/**
+ * @type {Object}
+ */
+DataView.prototype = {};
+
+/**
+ * @type {ArrayBuffer}
+ */
+DataView.prototype.buffer = new ArrayBuffer(0);
+
+/**
+ * @type {number}
+ */
+DataView.prototype.byteLength = 0;
+
+/**
+ * @type {number}
+ */
+DataView.prototype.byteOffset = 0;
+
+/**
+ * @param {number} byteOffset
+ * @param {boolean=} littleEndian
+ * @return {number}
+ */
+DataView.prototype.getFloat32 = function (byteOffset, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {boolean=} littleEndian
+ * @return {number}
+ */
+DataView.prototype.getFloat64 = function (byteOffset, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {boolean=} littleEndian
+ * @return {number}
+ */
+DataView.prototype.getInt16 = function (byteOffset, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {boolean=} littleEndian
+ * @return {number}
+ */
+DataView.prototype.getInt32 = function (byteOffset, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @return {number}
+ */
+DataView.prototype.getInt8 = function (byteOffset) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {boolean=} littleEndian
+ * @return {number}
+ */
+DataView.prototype.getUint16 = function (byteOffset, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {boolean=} littleEndian
+ * @return {number}
+ */
+DataView.prototype.getUint32 = function (byteOffset, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @return {number}
+ */
+DataView.prototype.getUint8 = function (byteOffset) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {number} value
+ * @param {boolean=} littleEndian
+ */
+DataView.prototype.setFloat32 = function (byteOffset, value, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {number} value
+ * @param {boolean=} littleEndian
+ */
+DataView.prototype.setFloat64 = function (byteOffset, value, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {number} value
+ * @param {boolean=} littleEndian
+ */
+DataView.prototype.setInt16 = function (byteOffset, value, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {number} value
+ * @param {boolean=} littleEndian
+ */
+DataView.prototype.setInt32 = function (byteOffset, value, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {number} value
+ */
+DataView.prototype.setInt8 = function (byteOffset, value) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {number} value
+ * @param {boolean=} littleEndian
+ */
+DataView.prototype.setUint16 = function (byteOffset, value, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {number} value
+ * @param {boolean=} littleEndian
+ */
+DataView.prototype.setUint32 = function (byteOffset, value, littleEndian) {};
+
+/**
+ * @param {number} byteOffset
+ * @param {number} value
+ */
+DataView.prototype.setUint8 = function (byteOffset, value) {};
+
+/**
+ * @interface
+ * @param {(number|TypedArray|{length: number}|{next: function(): {value: *, done: boolean}}|ArrayBuffer)} length_typedArray_object_buffer
+ * @param {number=} _byteOffset
+ * @param {number=} _length
+ * @constructor
+ */
+function TypedArray(length_typedArray_object_buffer, _byteOffset, _length) {}
+
+/**
+ * @type {number}
+ */
+TypedArray.BYTES_PER_ELEMENT = 0;
+
+/**
+ * @type {string}
+ */
+TypedArray.name = "";
+
+/**
+ * @type {Object}
+ */
+TypedArray.prototype = {};
+
+/**
+ * @template T
+ * @param {({length: number}|{next: function(): {value: *, done: boolean}})} source
+ * @param {function(this: T, *): number=} mapFn
+ * @param {T=} thisArg
+ * @return {TypedArray}
+ */
+TypedArray.from = function (source, mapFn, thisArg) {};
+
+/**
+ * @param {...number} _element
+ * @return {TypedArray}
+ */
+TypedArray.of = function (_element) {};
+
+/**
+ * @param {number} target
+ * @param {number} start
+ * @param {number} end
+ */
+TypedArray.prototype.copyWithin = function (target, start, end) {};
+
+/**
+ * @return {{next: function(): {value: number, done: boolean}}}
+ */
+TypedArray.prototype.entries = function () {};
+
+/**
+ * @template T
+ * @param {function(this: T, number, number, TypedArray): boolean} callback
+ * @param {T=} thisArg
+ * @return {boolean}
+ */
+TypedArray.prototype.every = function (callback, thisArg) {};
+
+/**
+ * @param {number} value
+ * @param {number=} start
+ * @param {number=} end
+ */
+TypedArray.prototype.fill = function (value, start, end) {};
+
+/**
+ * @template T
+ * @param {function(this: T, number, number, TypedArray): number} callback
+ * @param {T=} thisArg
+ * @return {TypedArray}
+ */
+TypedArray.prototype.filter = function (callback, thisArg) {};
+
+/**
+ * @template T
+ * @param {function(this: T, number, number, TypedArray): number} callback
+ * @param {T=} thisArg
+ * @return {(undefined|number)}
+ */
+TypedArray.prototype.find = function (callback, thisArg) {};
+
+/**
+ * @template T
+ * @param {function(this: T, number, number, TypedArray): number} callback
+ * @param {T=} thisArg
+ * @return {number}
+ */
+TypedArray.prototype.findIndex = function (callback, thisArg) {};
+
+/**
+ * @template T
+ * @param {function(this: T, number, number, TypedArray)} callback
+ * @param {T=} thisArg
+ */
+TypedArray.prototype.forEach = function (callback, thisArg) {};
+
+/**
+ * @template E
+ * @param {E} searchElement
+ * @param {number=} fromIndex
+ * @return {number}
+ */
+TypedArray.prototype.indexOf = function (searchElement, fromIndex) {};
+
+/**
+ * @param {string} separator
+ * @return {string}
+ */
+TypedArray.prototype.join = function (separator) {};
+
+/**
+ * @return {{next: function(): {value: number, done: boolean}}}
+ */
+TypedArray.prototype.keys = function () {};
+
+/**
+ * @template E
+ * @param {E} searchElement
+ * @param {number=} fromIndex
+ * @return {number}
+ */
+TypedArray.prototype.lastIndexOf = function (searchElement, fromIndex) {};
+
+/**
+ * @template T
+ * @param {function(this: T, number, number, TypedArray): number} callback
+ * @param {T=} thisArg
+ * @return {TypedArray}
+ */
+TypedArray.prototype.map = function (callback, thisArg) {};
+
+/**
+ * @param {function(number, number, number, TypedArray): number} callback
+ * @param {number=} initialValue
+ * @return {number}
+ */
+TypedArray.prototype.reduce = function (callback, initialValue) {};
+
+/**
+ * @param {function(number, number, number, TypedArray)} callback
+ * @param {number=} initialValue
+ * @return {number}
+ */
+TypedArray.prototype.reduceRight = function (callback, initialValue) {};
+
+/**
+ * @return {TypedArray}
+ */
+TypedArray.prototype.reverse = function () {};
+
+/**
+ * @param {(Array<number>|TypedArray)} array
+ * @param {number=} offset
+ */
+TypedArray.prototype.set = function (array, offset) {};
+
+/**
+ * @param {number=} begin
+ * @param {number=} end
+ * @return {TypedArray}
+ */
+TypedArray.prototype.slice = function (begin, end) {};
+
+/**
+ * @template T
+ * @param {function(this: T, number, number, TypedArray)} callback
+ * @param {T=} thisArg
+ * @return {boolean}
+ */
+TypedArray.prototype.some = function (callback, thisArg) {};
+
+/**
+ * @param {function(number, number): number} compareFunction
+ * @return {TypedArray}
+ */
+TypedArray.prototype.sort = function (compareFunction) {};
+
+/**
+ * @param {number=} begin
+ * @param {number=} end
+ * @return {TypedArray}
+ */
+TypedArray.prototype.subarray = function (begin, end) {};
+
+/**
+ * @param {(string|Array<string>)=} locales
+ * @param {{localeMatcher: string=, style: string=, currency: string=, currencyDisplay: string=, useGrouping: boolean=, minimumIntegerDigits: number=, minimumFractionDigits: number=, maximumFractionDigits: number=, minimumSignificantDigits: number=, maximumSignificantDigits: number=}=} options
+ * @return {string}
+ */
+TypedArray.prototype.toLocaleString = function (locales, options) {};
+
+/**
+ * @return {string}
+ */
+TypedArray.prototype.toString = function () {};
+
+/**
+ * @return {{next: function(): {value: number, done: boolean}}}
+ */
+TypedArray.prototype.values = function () {};
+
+/**
+ * @implements TypedArray
+ */
+function Int8Array() {}
+
+/**
+ * @implements TypedArray
+ */
+function Uint8Array() {}
+
+/**
+ * @implements TypedArray
+ */
+function Uint8ClampedArray() {}
+
+/**
+ * @implements TypedArray
+ */
+function Int16Array() {}
+
+/**
+ * @implements TypedArray
+ */
+function Uint16Array() {}
+
+/**
+ * @implements TypedArray
+ */
+function Int32Array() {}
+
+/**
+ * @implements TypedArray
+ */
+function Uint32Array() {}
+
+/**
+ * @implements TypedArray
+ */
+function Float32Array() {}
+
+/**
+ * @implements TypedArray
+ */
+function Float64Array() {}
+
+/**
+ * @template K
+ * @template V
+ * @param {(Array<Array<(K|V)>>|{next: function(): {value: Array<(K|V)>, done: boolean}})=} iterable
+ */
+function Map(iterable) {}
+
+/**
+ * @type {Object}
+ */
+Map.prototype = {};
+
+/**
+ * @type {number}
+ */
+Map.prototype.size = 0;
+
+/**
+ */
+Map.prototype.clear = function () {};
+
+/**
+ * @param {K} key
+ * @return {boolean}
+ */
+Map.prototype.delete = function (key) {};
+
+/**
+ * @return {{next: function(): {value: Array<(K|V)>, done: boolean}}}
+ */
+Map.prototype.entries = function () {};
+
+/**
+ * @template T
+ * @template V
+ * @template K
+ * @param {function(this: T, V, K, Map<K, V>)} callback
+ * @param {T=} thisArg
+ */
+Map.prototype.forEach = function (callback, thisArg) {};
+
+/**
+ * @param {K} key
+ * @return {(undefined|V)}
+ */
+Map.prototype.get = function (key) {};
+
+/**
+ * @param {K} key
+ * @return {boolean}
+ */
+Map.prototype.has = function (key) {};
+
+/**
+ * @return {{next: function(): {value: K, done: boolean}}}
+ */
+Map.prototype.keys = function () {};
+
+/**
+ * @param {K} key
+ * @param {V} value
+ * @return {Map<K, V>}
+ */
+Map.prototype.set = function (key, value) {};
+
+/**
+ * @return {{next: function(): {value: V, done: boolean}}}
+ */
+Map.prototype.values = function () {};
+
+/**
+ * @template E
+ * @param {(Array<E>|{next: function(): {value: E, done: boolean}})=} iterable
+ */
+function Set(iterable) {}
+
+/**
+ * @type {Object}
+ */
+Set.prototype = {};
+
+/**
+ * @type {number}
+ */
+Set.prototype.size = 0;
+
+/**
+ * @param {E} value
+ * @return {Set<E>}
+ */
+Set.prototype.add = function (value) {};
+
+/**
+ */
+Set.prototype.clear = function () {};
+
+/**
+ * @param {E} value
+ * @return {boolean}
+ */
+Set.prototype.delete = function (value) {};
+
+/**
+ * @return {{next: function(): {value: Array<E>, done: boolean}}}
+ */
+Set.prototype.entries = function () {};
+
+/**
+ * @template T
+ * @param {function(this: T, E, E, Set<E>)} callback
+ * @param {T=} thisArg
+ */
+Set.prototype.forEach = function (callback, thisArg) {};
+
+/**
+ * @param {E} value
+ * @return {boolean}
+ */
+Set.prototype.has = function (value) {};
+
+/**
+ * @return {{next: function(): {value: E, done: boolean}}}
+ */
+Set.prototype.values = function () {};
+
+/**
+ * @template K
+ * @template V
+ * @param {(Array<Array<(K|V)>>|{next: function(): {value: Array<(K|V)>, done: boolean}})=} iterable
+ */
+function WeakMap(iterable) {}
+
+/**
+ * @type {Object}
+ */
+WeakMap.prototype = {};
+
+/**
+ * @param {K} key
+ * @return {boolean}
+ */
+WeakMap.prototype.delete = function (key) {};
+
+/**
+ * @param {K} key
+ * @return {(undefined|V)}
+ */
+WeakMap.prototype.get = function (key) {};
+
+/**
+ * @param {K} key
+ * @return {boolean}
+ */
+WeakMap.prototype.has = function (key) {};
+
+/**
+ * @param {K} key
+ * @param {V} value
+ * @return {WeakMap<K, V>}
+ */
+WeakMap.prototype.set = function (key, value) {};
+
+/**
+ * @template E
+ * @param {(Array<E>|{next: function(): {value: E, done: boolean}})=} iterable
+ */
+function WeakSet(iterable) {}
+
+/**
+ * @type {Object}
+ */
+WeakSet.prototype = {};
+
+/**
+ * @param {E} value
+ * @return {WeakSet<E>}
+ */
+WeakSet.prototype.add = function (value) {};
+
+/**
+ * @param {E} value
+ * @return {boolean}
+ */
+WeakSet.prototype.delete = function (value) {};
+
+/**
+ * @param {E} value
+ * @return {boolean}
+ */
+WeakSet.prototype.has = function (value) {};
+
+/**
+ * @template R
+ * @param {function(function(R), function(Error))} executor
+ */
+function Promise(executor) {}
+
+/**
+ * @type {Object}
+ */
+Promise.prototype = {};
+
+/**
+ * @template R
+ * @param {(Array<(R|Promise<R>|{then: function(function(R), function(Error))})>|{next: function(): {value: (R|Promise<R>|{then: function(function(R), function(Error))}), done: boolean}})} iterable
+ * @return {Promise<Array<R>>}
+ */
+Promise.all = function (iterable) {};
+
+/**
+ * @template O
+ * @param {function(Error): (O|Promise<O>|{then: function(function(O), function(Error))})} onRejected
+ * @return {Promise<O>}
+ */
+Promise.prototype.catch = function (onRejected) {};
+
+/**
+ * @template R
+ * @template O
+ * @param {function(R): (O|Promise<O>|{then: function(function(O), function(Error))})} onFulfilled
+ * @param {function(Error): (O|Promise<O>|{then: function(function(O), function(Error))})=} onRejected
+ * @return {Promise<O>}
+ */
+Promise.prototype.then = function (onFulfilled, onRejected) {};
+
+/**
+ * @param {(Array<(R|Promise<R>|{then: function(function(R), function(Error))})>|{next: function(): {value: (R|Promise<R>|{then: function(function(R), function(Error))}), done: boolean}})} iterable
+ */
+Promise.race = function (iterable) {};
+
+/**
+ * @param {Error} reason
+ * @return {Promise<undefined>}
+ */
+Promise.reject = function (reason) {};
+
+/**
+ * @template R
+ * @param {(R|Promise<R>|{then: function(function(R), function(Error))})} value
+ * @return {Promise<R>}
+ */
+Promise.resolve = function (value) {};
+
+/**
+ * @type {Object}
+ */
+var Reflect = {};
+
+/**
+ * @template R
+ * @template T
+ * @template A
+ * @param {function(this: T, ...A): R} target
+ * @param {T} thisArgument
+ * @param {(Array<A>|{length: number})} argumentsList
+ * @return {R}
+ */
+Reflect.apply = function (target, thisArgument, argumentsList) {};
+
+/**
+ * @template T
+ * @template A
+ * @param {function(new: T, ...A)} target
+ * @param {(Array<A>|{length: number})} argumentsList
+ * @param {function(new: T, ...*)=} newTarget
+ * @return {T}
+ */
+Reflect.construct = function (target, argumentsList, newTarget) {};
+
+/**
+ * @param {Object} target
+ * @param {(string|symbol)} propertyKey
+ * @param {({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})} attributes
+ * @return {boolean}
+ */
+Reflect.defineProperty = function (target, propertyKey, attributes) {};
+
+/**
+ * @param {Object} target
+ * @param {(string|symbol)} propertyKey
+ * @return {boolean}
+ */
+Reflect.deleteProperty = function (target, propertyKey) {};
+
+/**
+ * @param {Object} target
+ * @param {(string|symbol)} propertyKey
+ * @param {Object=} receiver
+ * @return {*}
+ */
+Reflect.get = function (target, propertyKey, receiver) {};
+
+/**
+ * @param {Object} target
+ * @param {(string|symbol)} propertyKey
+ * @return {(undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})}
+ */
+Reflect.getOwnPropertyDescriptor = function (target, propertyKey) {};
+
+/**
+ * @param {Object} target
+ * @return {?Object}
+ */
+Reflect.getPrototypeOf = function (target) {};
+
+/**
+ * @param {Object} target
+ * @param {(string|symbol)} propertyKey
+ * @return {boolean}
+ */
+Reflect.has = function (target, propertyKey) {};
+
+/**
+ * @param {Object} target
+ * @return {boolean}
+ */
+Reflect.isExtensible = function (target) {};
+
+/**
+ * @param {Object} target
+ * @return {Array<(string|symbol)>}
+ */
+Reflect.ownKeys = function (target) {};
+
+/**
+ * @param {Object} target
+ * @return {boolean}
+ */
+Reflect.preventExtensions = function (target) {};
+
+/**
+ * @param {Object} target
+ * @param {(string|symbol)} propertyKey
+ * @param {*} value
+ * @param {Object=} receiver
+ * @return {boolean}
+ */
+Reflect.set = function (target, propertyKey, value, receiver) {};
+
+/**
+ * @param {Object} target
+ * @param {?Object} prototype
+ * @return {boolean}
+ */
+Reflect.setPrototypeOf = function (target, prototype) {};
+
+/**
+ * @param {Object} target
+ * @param {{apply: function(Object, Object, Array<*>): *=, construct: function(Object, Array<*>, Function): Object=, defineProperty: function(Object, (string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})): boolean=, deleteProperty: function(Object, (string|symbol)): boolean=, get: function(Object, (string|symbol), Object): *=, getOwnPropertyDescriptor: function(Object, (string|symbol)): (undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})=, getPrototypeOf: function(Object): ?Object=, has: function(Object, (string|symbol)): boolean=, isExtensible: function(Object): boolean=, ownKeys: function(Object): (Array<(string|symbol)>|{next: function(): {value: (string|symbol), done: boolean}})=, preventExtensions: function(Object): boolean=, set: function(Object, (string|symbol), *, Object): boolean=, setPrototypeOf: function(Object, ?Object): boolean=}} handler
+ */
+function Proxy(target, handler) {}
+
+/**
+ * @param {Object} target
+ * @param {{apply: function(Object, Object, Array<*>): *=, construct: function(Object, Array<*>, Function): Object=, defineProperty: function(Object, (string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})): boolean=, deleteProperty: function(Object, (string|symbol)): boolean=, get: function(Object, (string|symbol), Object): *=, getOwnPropertyDescriptor: function(Object, (string|symbol)): (undefined|{configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})=, getPrototypeOf: function(Object): ?Object=, has: function(Object, (string|symbol)): boolean=, isExtensible: function(Object): boolean=, ownKeys: function(Object): (Array<(string|symbol)>|{next: function(): {value: (string|symbol), done: boolean}})=, preventExtensions: function(Object): boolean=, set: function(Object, (string|symbol), *, Object): boolean=, setPrototypeOf: function(Object, ?Object): boolean=}} handler
+ * @return {{proxy: Proxy, revoke: function()}}
+ */
+Proxy.revocable = function (target, handler) {};
