@@ -1161,3 +1161,46 @@ JSON.parse = function (text, reviver) {};
  * @see JSON.parse()
  */
 JSON.stringify = function (value, replacer, space) {};
+
+/**
+ * The iterator protocol defines a standard way to produce a sequence of values
+ * (either finite or infinite).
+ *
+ * @template E
+ * @interface
+ */
+function Iterator() {}
+
+/**
+ * The next method always has to return an object with appropriate properties
+ * including done and value. If a non-object value gets returned (such as
+ * <code>false</code> or <code>undefined</code>), a
+ * <code>TypeError("iterator.next() returned a non-object value")</code> will
+ * be thrown.
+ *
+ * @return {{value: E, done: boolean}} An object with two properties:
+ *         <ul>
+ *             <li>
+ *                 <code>value</code> - any JavaScript value returned by the
+ *                 iterator. Can be omitted when done is true.
+ *             </li>
+ *             <li>
+ *                 <code>done</code>
+ *                 <ul>
+ *                     <li>
+ *                         Has the value <code>true</code> if the iterator is
+ *                         past the end of the iterated sequence. In this case
+ *                         value optionally specifies the return value of the
+ *                         iterator.
+ *                     </li>
+ *                     <li>
+ *                         Has the value <code>false</code> if the iterator was
+ *                         able to produce the next value in the sequence. This
+ *                         is equivalent of not specifying the done property
+ *                         altogether.
+ *                     </li>
+ *                 </ul>
+ *             </li>
+ *         </ul>
+ */
+Iterator.prototype.next = function () {};

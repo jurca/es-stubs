@@ -3511,3 +3511,30 @@ function Proxy(target, handler) {}
  * @see Proxy
  */
 Proxy.revocable = function (target, handler) {};
+
+/**
+ * The iterable protocol allows JavaScript objects to define or customize their
+ * iteration behavior, such as what values are looped over in a
+ * <code>for..of</code> construct. Some built-in types are built-in iterables
+ * with a default iteration behavior, such as <code>Array</code> or
+ * <code>Map</code>, while other types (such as <code>Object</code>) are not.
+ *
+ * In order to be iterable, an object must implement the
+ * <code>@@iterator</code> method, meaning that the object (or one of the
+ * objects up its prototype chain) must have a property with a
+ * <code>@@iterator</code> key which is available via constant
+ * <code>Symbol.iterator</code>.
+ *
+ * @template E
+ * @interface
+ */
+function Iterable() {}
+
+/**
+ * A zero arguments function that returns an object, conforming to the iterator
+ * protocol.
+ *
+ * @return {Iterator<E>} The iterator object for iterating through the contents
+ *         of this object.
+ */
+Iterable.prototype[Symbol.iterator] = function () {};
