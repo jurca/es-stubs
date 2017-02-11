@@ -4,13 +4,13 @@
  * @summary 
  * @param {?Object} proto The object which should be the prototype of the
  * newly-created object.
- * @param propertiesObject Optional. If specified and not
- * <code>undefined</code>, an object whose enumerable own properties (that is,
- * those properties defined upon itself and <em>not</em> enumerable properties
- * along its prototype chain) specify property descriptors to be added to the
- * newly-created object, with the corresponding property names. These
- * properties correspond to the second argument of
- * <code>Object.defineProperties()</code>.
+ * @param {Object<(string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})>=} propertiesObject
+ * Optional. If specified and not <code>undefined</code>, an object whose
+ * enumerable own properties (that is, those properties defined upon itself and
+ * <em>not</em> enumerable properties along its prototype chain) specify
+ * property descriptors to be added to the newly-created object, with the
+ * corresponding property names. These properties correspond to the second
+ * argument of <code>Object.defineProperties()</code>.
  * @return {Object} <p>A new object with the specified prototype object and
  * properties.</p>
  * @see Object.defineProperty()

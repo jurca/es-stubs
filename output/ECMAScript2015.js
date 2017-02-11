@@ -2388,7 +2388,7 @@ TypedArray.prototype.subarray = function (begin, end) {};
  * <code>"mong"</code>, <code>"mymr"</code>, <code>"orya"</code>,
  * <code>"tamldec"</code>, <code>"telu"</code>, <code>"thai"</code>,
  * <code>"tibt"</code>.
- * @param options <p>Optional. An object with some or all of the following
+ * @param {{localeMatcher: string=, style: string=, currency: string=, currencyDisplay: string=, useGrouping: boolean=, minimumIntegerDigits: number=, minimumFractionDigits: number=, maximumFractionDigits: number=, minimumSignificantDigits: number=, maximumSignificantDigits: number=}=} <p>Optional. An object with some or all of the following
  * properties:</p> <dl><dt><code>localeMatcher</code></dt> <dd>The locale
  * matching algorithm to use. Possible values are <code>"lookup"</code> and
  * <code>"best fit"</code>; the default is <code>"best fit"</code>. For
@@ -2735,7 +2735,7 @@ Map.prototype.has = function (key) {};
  *
  *
  * @summary
- * @return @return {Iterator<K>} <p>A new <code>Map</code> iterator object.</p>
+ * @return {Iterator<K>} <p>A new <code>Map</code> iterator object.</p>
  * @see Map.prototype.entries()
  * @see Map.prototype.values()
  */
@@ -3304,7 +3304,8 @@ Reflect.construct = function (target, argumentsList, newTarget) {};
  * @param {Object} target The target object on which to define the property.
  * @param {(string|symbol)} propertyKey The name of the property to be defined
  * or modified.
- * @param attributes The attributes for the property being defined or modified.
+ * @param {({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})} attributes
+ * The attributes for the property being defined or modified.
  * @return {boolean} <p>A <code>Boolean</code> indicating whether or not the
  * property was successfully defined.</p>
  * @see Reflect

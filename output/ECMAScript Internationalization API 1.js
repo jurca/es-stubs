@@ -48,7 +48,7 @@ var Intl;
  * <code>"false"</code> (use the locale's default). This option can be set
  * through an <code>options</code> property or through a Unicode extension key;
  * if both are provided, the <code>options</code> property takes precedence.
- * @param options <p>Optional. An object with some or all of the following
+ * @param {{localeMatcher: string=, usage: string=, sensitivity: string=, ignorePunctuation: boolean=, numeric: boolean=, caseFirst: boolean=}=} options <p>Optional. An object with some or all of the following
  * properties:</p> <dl> <dt><code>localeMatcher</code></dt> <dd>The locale
  * matching algorithm to use. Possible values are <code>"lookup"</code> and
  * <code>"best fit"</code>; the default is <code>"best fit"</code>. For
@@ -198,7 +198,7 @@ Intl.Collator.supportedLocalesOf = function (locales, options) {};
  * <code>"gregory"</code>, <code>"hebrew"</code>, <code>"indian"</code>,
  * <code>"islamic"</code>, <code>"islamicc"</code>, <code>"iso8601"</code>,
  * <code>"japanese"</code>, <code>"persian"</code>, <code>"roc"</code>.
- * @param options <p>Optional. An object with some or all of the following
+ * @param {{localeMatcher: string=, timeZone: string=, hour12: boolean=, formatMatcher: string=}=} options <p>Optional. An object with some or all of the following
  * properties:</p> <dl> <dt><code>localeMatcher</code></dt> <dd>The locale
  * matching algorithm to use. Possible values are <code>"lookup"</code> and
  * <code>"best fit"</code>; the default is <code>"best fit"</code>. For
@@ -305,8 +305,9 @@ Intl.DateTimeFormat.prototype.format = function (date) {};
  * represented in formatted output.</dd> </dl>
  *
  * @summary 
- * @return <p>A new object with properties reflecting the locale and date and
- * time formatting options computed during the initialization of the given
+ * @return {{locale: string, calendar: string, numberingSystem: string, timeZone: string, hour12: boolean, weekday: string=, era: string=, year: string=, month: string=, day: string=, hour: string=, minute: string=, second: string=, timeZoneName: string=}} <p>A
+ * new object with properties reflecting the locale and date and time
+ * formatting options computed during the initialization of the given
  * <code>DateTimeFormat</code> object.</p>
  * @see Intl.DateTimeFormat
  */

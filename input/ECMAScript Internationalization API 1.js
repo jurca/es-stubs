@@ -62,9 +62,9 @@ Intl.DateTimeFormat.prototype.format = function (date) {};
 
 /**
  * @return {{locale: string, calendar: string, numberingSystem: string, timeZone: string, hour12: boolean, weekday: string=, era: string=, year: string=, month: string=, day: string=, hour: string=, minute: string=, second: string=, timeZoneName: string=}} An
- *          object with properties reflecting the locale and date and time
- *          formatting options computed during initialization of this
- *          {@linkcode DateTimeFormat} object.
+ *         object with properties reflecting the locale and date and time
+ *         formatting options computed during initialization of this
+ *         {@linkcode DateTimeFormat} object.
  */
 Intl.DateTimeFormat.prototype.resolvedOptions = function () {};
 

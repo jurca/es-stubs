@@ -43,8 +43,9 @@ Object.entries = function (obj) {};
  * @summary 
  * @param {Object} obj The object for which to get all own property
  * descriptors.
- * @return <p>An object containing all own property descriptors of an object.
- * Might be an empty object, if there are no properties.</p>
+ * @return {Object<(string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})>} <p>An
+ * object containing all own property descriptors of an object. Might be an
+ * empty object, if there are no properties.</p>
  * @see Object.getOwnPropertyDescriptor()
  * @see Object.defineProperty()
  */

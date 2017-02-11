@@ -1,6 +1,6 @@
 /**
  * @param {?Object} proto
- * @param {Object<string, {configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=, get: function(): *=, set: function(*): undefined=}>=} propertiesObject
+ * @param {Object<(string|symbol), ({configurable: boolean=, enumerable: boolean=, value: *=, writable: boolean=}|{configurable: boolean=, enumerable: boolean=, get: function(): *=, set: function(*): undefined=})>=} propertiesObject
  * @return {Object} New object with the specified prototype and properties.
  */
 Object.create = function (proto, propertiesObject) {};
