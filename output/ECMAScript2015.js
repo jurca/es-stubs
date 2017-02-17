@@ -3220,7 +3220,7 @@ Promise.reject = function (reason) {};
  *
  * @summary
  * @template R
- * @param {(R|Promise<R>|{then: function(function(R), function(Error))})} value
+ * @param {(R|Promise<R>|{then: function(function(R), function(Error))})=} value
  * Argument to be resolved by this <code>Promise</code>. Can also be a
  * <code>Promise</code> or a thenable to resolve.
  * @return {Promise<R>} <p>A <code>Promise</code> that is resolved with the

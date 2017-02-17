@@ -1165,7 +1165,7 @@ Promise.reject = function (reason) {};
 
 /**
  * @template R
- * @param {(R|Promise<R>|{then: function(function(R), function(Error))})} value
+ * @param {(R|Promise<R>|{then: function(function(R), function(Error))})=} value
  * @return {Promise<R>}
  */
 Promise.resolve = function (value) {};

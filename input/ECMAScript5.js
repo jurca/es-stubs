@@ -229,8 +229,8 @@ JSON.parse = function (text, reviver) {};
 
 /**
  * @param {(null|boolean|number|string|Object)} value
- * @param {?(function(string, (undefined|null|boolean|number|string|Object)): (undefined|boolean|number|string|Object)|Array<string>)} replacer
- * @param {(number|string)} space
+ * @param {?(function(string, (undefined|null|boolean|number|string|Object)): (undefined|boolean|number|string|Object)|Array<string>)=} replacer
+ * @param {(number|string)=} space
  * @return {string} Serialized <code>value</code>.
  */
 JSON.stringify = function (value, replacer, space) {};
